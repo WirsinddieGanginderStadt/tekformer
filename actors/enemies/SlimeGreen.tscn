@@ -1,0 +1,60 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://actors/enemies/Slime.gd" type="Script" id=1]
+[ext_resource path="res://assets/textures/enemies/slime/green/slimeGreen.png" type="Texture" id=2]
+[ext_resource path="res://assets/textures/enemies/slime/green/slimeGreen_walk.png" type="Texture" id=3]
+[ext_resource path="res://assets/textures/enemies/slime/green/slimeGreen_squashed.png" type="Texture" id=4]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 2 ) ],
+"loop": true,
+"name": "stand",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 2 ), ExtResource( 3 ) ],
+"loop": true,
+"name": "walk",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 4 ) ],
+"loop": true,
+"name": "dead",
+"speed": 5.0
+} ]
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 18.6803, 16.1874 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 18, 0.804782 )
+
+[sub_resource type="RectangleShape2D" id=4]
+extents = Vector2( 18.454, 16.1735 )
+
+[node name="SlimeGreen" type="KinematicBody2D"]
+script = ExtResource( 1 )
+
+[node name="AnimatedSprite" type="AnimatedSprite" parent="."]
+frames = SubResource( 1 )
+animation = "walk"
+frame = 1
+playing = true
+
+[node name="Area2D_Side" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D_Side"]
+position = Vector2( 0, 0.96202 )
+shape = SubResource( 2 )
+
+[node name="Area2D_Top" type="Area2D" parent="."]
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Area2D_Top"]
+position = Vector2( 0.0537338, -16.0396 )
+shape = SubResource( 3 )
+
+[node name="CollisionShapeAlive" type="CollisionShape2D" parent="."]
+position = Vector2( 0, 0.709 )
+shape = SubResource( 4 )
+[connection signal="area_entered" from="Area2D_Side" to="." method="_on_Area2D_Side_area_entered"]
+[connection signal="area_entered" from="Area2D_Top" to="." method="_on_Area2D_Top_area_entered"]

@@ -1,0 +1,33 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://levels/LevelControls.gd" type="Script" id=1]
+[ext_resource path="res://levels/ParallaxBackground1.tscn" type="PackedScene" id=2]
+[ext_resource path="res://tilesets/world1.tres" type="TileSet" id=3]
+[ext_resource path="res://actors/Player.tscn" type="PackedScene" id=4]
+[ext_resource path="res://interactables/NextLevelTeleporter.tscn" type="PackedScene" id=5]
+[ext_resource path="res://ui/Titlebar.tscn" type="PackedScene" id=6]
+[ext_resource path="res://ui/HUD.tscn" type="PackedScene" id=7]
+
+[node name="1-1" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="ParallaxBackground" parent="." instance=ExtResource( 2 )]
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = ExtResource( 3 )
+cell_size = Vector2( 70, 70 )
+cell_custom_transform = Transform2D( 1, 0, 0, 1, 1, 0 )
+format = 1
+tile_data = PoolIntArray( 131088, 1, 0, 131089, 2, 0, 131090, 3, 0, 196634, 1, 0, 196635, 2, 0, 196636, 2, 0, 196637, 2, 0, 196638, 3, 0, 196663, 1, 0, 196664, 3, 0, 196689, 0, 0, 262152, 1, 0, 262153, 2, 0, 262154, 2, 0, 262155, 2, 0, 262156, 3, 0, 262193, 1, 0, 262194, 3, 0, 262212, 1, 0, 262213, 2, 0, 262214, 2, 0, 262215, 2, 0, 262216, 3, 0, 327701, 1, 0, 327702, 2, 0, 327703, 3, 0, 327723, 1, 0, 327724, 3, 0, 327767, 1, 0, 327768, 2, 0, 327769, 2, 0, 327770, 2, 0, 327771, 3, 0, 458751, 1, 0, 393216, 2, 0, 393217, 2, 0, 393218, 2, 0, 393219, 3, 0, 393293, 0, 0, 458787, 1, 0, 458788, 2, 0, 458789, 2, 0, 458790, 2, 0, 458791, 3, 0, 458812, 1, 0, 458813, 2, 0, 458814, 2, 0, 458815, 2, 0, 458816, 3, 0 )
+
+[node name="Player1" parent="." instance=ExtResource( 4 )]
+position = Vector2( 98, -56 )
+
+[node name="1-2" parent="." instance=ExtResource( 5 )]
+position = Vector2( 6253, 351 )
+
+[node name="Titlebar" parent="." instance=ExtResource( 6 )]
+
+[node name="HUD" parent="." instance=ExtResource( 7 )]
+
+[node name="Enemies" type="Node2D" parent="."]

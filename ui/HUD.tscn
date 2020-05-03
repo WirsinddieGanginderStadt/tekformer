@@ -11,18 +11,24 @@ layer = 1
 
 [node name="Level" type="Label" parent="."]
 margin_left = 20.0
-margin_top = 48.0
-margin_right = 83.0
-margin_bottom = 66.0
+margin_top = 18.0
+margin_right = 89.0
+margin_bottom = 36.0
 custom_fonts/font = SubResource( 1 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Level: 0-0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Deaths" type="Label" parent="."]
 margin_left = 20.0
-margin_top = 68.0
+margin_top = 38.0
 margin_right = 83.0
-margin_bottom = 86.0
+margin_bottom = 56.0
 custom_fonts/font = SubResource( 1 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Deaths: 0"
+__meta__ = {
+"_edit_use_anchors_": false
+}

@@ -1,11 +1,10 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://levels/LevelControls.gd" type="Script" id=1]
 [ext_resource path="res://levels/ParallaxBackground1.tscn" type="PackedScene" id=2]
 [ext_resource path="res://tilesets/world1.tres" type="TileSet" id=3]
 [ext_resource path="res://actors/Player.tscn" type="PackedScene" id=4]
 [ext_resource path="res://interactables/NextLevelTeleporter.tscn" type="PackedScene" id=5]
-[ext_resource path="res://ui/Titlebar.tscn" type="PackedScene" id=6]
 [ext_resource path="res://ui/HUD.tscn" type="PackedScene" id=7]
 
 [node name="1-2" type="Node2D"]
@@ -24,8 +23,6 @@ position = Vector2( 98, -56 )
 
 [node name="1-3" parent="." instance=ExtResource( 5 )]
 position = Vector2( 6338, 210 )
-
-[node name="Titlebar" parent="." instance=ExtResource( 6 )]
 
 [node name="HUD" parent="." instance=ExtResource( 7 )]
 

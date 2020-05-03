@@ -31,12 +31,11 @@ func _physics_process(delta):
 
 
 
-""" KILL: kills the player. """
+""" KILL: kills the player and resets the level. """
 #   @param reason [String]: the reason why the player got killed. used to log the death to the console.
 
 func kill(reason: String):
-	$Player1.position = Vector2(100.0, -55.0)                     # reset player position
-	$Player1._velocity = Vector2.ZERO                             # reset player velocity
+	$Player1.kill()                                               # kill player
 	deaths += 1                                                   # increase death counter
 	print("[death] [", name, "]: #", deaths, " (", reason, ")")   # log death message
 	$HUD/Deaths.text = "Deaths: " + String(deaths)                # update death hud on screen

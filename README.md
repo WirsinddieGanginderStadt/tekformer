@@ -14,12 +14,12 @@ Simple platformer school project made with the Godot Engine.
 
 ## Team
 
-Thomas Kößl (@thetek42, tk)
+Thomas Kößl (Main Coding, Music) (@thetek42, tk)
 
-David Schmid (@BlackVirusEXE, ds)
+David Schmid (Main Coding) (@BlackVirusEXE, ds)
 
-Tobias Reiter (@TobiR04, tr)
+Johannes Mahl (Coding, Level Design, Testing) (@JohannesMHL, jm)
 
-Johannes Mahl (@JohannesMHL, jm)
+Lukas Mahl (Coding, Level Design) (@mahllukas, lm)
 
-Lukas Mahl (@mahllukas, lm)
+Tobias Reiter (Coding, Level Design, Testing) (@TobiR04, tr)

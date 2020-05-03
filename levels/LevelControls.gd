@@ -1,6 +1,6 @@
 """
 	LEVELCONTROLS.GD
-	@auth tk
+	@auth tk, ds
 	@desc handles most of the things that happen in a level (deaths etc).
 """
 
@@ -11,6 +11,7 @@ extends Node2D
 """ VARIABLES """
 
 var deaths := 0   # amount of deaths
+var level_timer := 0.0 # timer 
 
 
 
@@ -19,16 +20,24 @@ var deaths := 0   # amount of deaths
 func _ready():
 	print("[level]: ", name)             # log level to console
 	$HUD/Level.text = "Level: " + name   # show current level in hud
+	level_timer = 0.0 # reseting timer
 
 
 
-""" _PHYSICS_PROCESS: called once per frame. does main physics calculations. """
+""" _PHYSICS_PROCESS: called once per frame when physiks-processing. does main physics calculations. """
 #    @param delta [float]: time between two frames, filled in by the engine
 
 func _physics_process(delta):
 	if $Player1.position.y > 1500:
 		kill("void")   # kill player when in the void
 
+""" _PROCESS: called once per frame when processing. """
+#    @param delta [float]: time between two frames, filled in by the engine
+
+func _process(delta: float):
+	level_timer += delta #incresing timer by delta
+	var timer_length := String(int(level_timer)).length() + 3            # calculats hole number length of level_timer +3
+	$HUD/Timer.text = "Timer: " + String(level_timer).left(timer_length) # updates Timer in Hub only showing 2 decimals
 
 
 """ KILL: kills the player and resets the level. """
@@ -40,6 +49,7 @@ func kill(reason: String):
 	print("[death] [", name, "]: #", deaths, " (", reason, ")")   # log death message
 	$HUD/Deaths.text = "Deaths: " + String(deaths)                # update death hud on screen
 	reset_enemies()                                               # reset enemies
+	level_timer = 0.0                                             # reseting timer
 
 
 

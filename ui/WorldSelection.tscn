@@ -16,8 +16,10 @@ font_data = ExtResource( 5 )
 [node name="Titlebar" parent="." instance=ExtResource( 1 )]
 
 [node name="Buttons" type="Node2D" parent="."]
+editor/display_folded = true
 
 [node name="1" type="TextureButton" parent="Buttons"]
+editor/display_folded = true
 margin_left = 32.0
 margin_top = 64.0
 margin_right = 288.0
@@ -38,6 +40,7 @@ custom_fonts/font = SubResource( 1 )
 text = "World 1"
 
 [node name="2" type="TextureButton" parent="Buttons"]
+editor/display_folded = true
 margin_left = 32.0
 margin_top = 128.0
 margin_right = 288.0
@@ -55,6 +58,7 @@ custom_fonts/font = SubResource( 1 )
 text = "World 2"
 
 [node name="3" type="TextureButton" parent="Buttons"]
+editor/display_folded = true
 margin_left = 32.0
 margin_top = 192.0
 margin_right = 288.0
@@ -72,6 +76,7 @@ custom_fonts/font = SubResource( 1 )
 text = "World 3"
 
 [node name="4" type="TextureButton" parent="Buttons"]
+editor/display_folded = true
 margin_left = 32.0
 margin_top = 256.0
 margin_right = 288.0
@@ -89,6 +94,7 @@ custom_fonts/font = SubResource( 1 )
 text = "World 4"
 
 [node name="5" type="TextureButton" parent="Buttons"]
+editor/display_folded = true
 margin_left = 32.0
 margin_top = 320.0
 margin_right = 288.0
@@ -106,6 +112,7 @@ custom_fonts/font = SubResource( 1 )
 text = "World 5"
 
 [node name="6" type="TextureButton" parent="Buttons"]
+editor/display_folded = true
 margin_left = 32.0
 margin_top = 384.0
 margin_right = 288.0
@@ -123,6 +130,7 @@ custom_fonts/font = SubResource( 1 )
 text = "World 6"
 
 [node name="7" type="TextureButton" parent="Buttons"]
+editor/display_folded = true
 margin_left = 32.0
 margin_top = 448.0
 margin_right = 288.0
@@ -140,6 +148,7 @@ custom_fonts/font = SubResource( 1 )
 text = "World 7"
 
 [node name="8" type="TextureButton" parent="Buttons"]
+editor/display_folded = true
 margin_left = 32.0
 margin_top = 512.0
 margin_right = 288.0

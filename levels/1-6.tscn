@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://levels/LevelControls.gd" type="Script" id=1]
 [ext_resource path="res://levels/ParallaxBackground1.tscn" type="PackedScene" id=2]
@@ -7,7 +7,6 @@
 [ext_resource path="res://interactables/NextLevelTeleporter.tscn" type="PackedScene" id=5]
 [ext_resource path="res://actors/enemies/SpinnerHalf.tscn" type="PackedScene" id=6]
 [ext_resource path="res://actors/enemies/Spinner.tscn" type="PackedScene" id=7]
-[ext_resource path="res://ui/Titlebar.tscn" type="PackedScene" id=8]
 [ext_resource path="res://ui/HUD.tscn" type="PackedScene" id=9]
 
 [node name="1-6" type="Node2D"]
@@ -28,7 +27,6 @@ position = Vector2( 98, -56 )
 position = Vector2( 5208.52, 140.69 )
 
 [node name="Enemies" type="Node2D" parent="."]
-editor/display_folded = true
 
 [node name="Spinner" parent="Enemies" instance=ExtResource( 6 )]
 position = Vector2( 1.79126, 404.698 )
@@ -52,7 +50,5 @@ rotation = 0.785398
 
 [node name="Spinner7" parent="Enemies" instance=ExtResource( 7 )]
 position = Vector2( 4484.13, 120.792 )
-
-[node name="Titlebar" parent="." instance=ExtResource( 8 )]
 
 [node name="HUD" parent="." instance=ExtResource( 9 )]

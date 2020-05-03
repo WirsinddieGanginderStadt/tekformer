@@ -1,10 +1,9 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=9 format=2]
 
 [ext_resource path="res://levels/LevelControls.gd" type="Script" id=1]
 [ext_resource path="res://levels/ParallaxBackground1.tscn" type="PackedScene" id=2]
 [ext_resource path="res://tilesets/world1.tres" type="TileSet" id=3]
 [ext_resource path="res://actors/Player.tscn" type="PackedScene" id=4]
-[ext_resource path="res://ui/Titlebar.tscn" type="PackedScene" id=5]
 [ext_resource path="res://ui/HUD.tscn" type="PackedScene" id=6]
 [ext_resource path="res://interactables/NextLevelTeleporter.tscn" type="PackedScene" id=7]
 [ext_resource path="res://actors/enemies/Spinner.tscn" type="PackedScene" id=8]
@@ -24,15 +23,12 @@ tile_data = PoolIntArray( 196599, 2, 0, 196600, 2, 0, 196601, 2, 0, 196602, 2, 0
 [node name="Player1" parent="." instance=ExtResource( 4 )]
 position = Vector2( 98, -56 )
 
-[node name="Titlebar" parent="." instance=ExtResource( 5 )]
-
 [node name="HUD" parent="." instance=ExtResource( 6 )]
 
 [node name="1-8" parent="." instance=ExtResource( 7 )]
 position = Vector2( 5830.96, 140.4 )
 
 [node name="Enemies" type="Node2D" parent="."]
-editor/display_folded = true
 
 [node name="Spinner" parent="Enemies" instance=ExtResource( 8 )]
 position = Vector2( 593.967, 403.37 )

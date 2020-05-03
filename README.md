@@ -2,6 +2,8 @@
 
 Simple platformer school project made with the Godot Engine.
 
+![GitHub package.json version](https://img.shields.io/github/package-json/v/thetek42/tekformer)
+
 ![GitHub issues](https://img.shields.io/github/issues/thetek42/tekformer)
 ![GitHub pull requests](https://img.shields.io/github/issues-pr/thetek42/tekformer)
 

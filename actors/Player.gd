@@ -17,6 +17,8 @@ export var gravity := 3500.0   # speed of the player - can be altered in the ins
 
 var _velocity := Vector2.ZERO   # velocity is set to 0 at the beginning
 
+var justStarted := true   # has the game just started / restarted
+
 
 
 """ _READY: called on object instantiation. """
@@ -29,17 +31,24 @@ func _ready():
 """ _PHYSICS_PROCESS: called once per frame. does main physics calculations. """
 #    @param delta [float]: time between two frames, filled in by the engine
 
-func _physics_process(delta: float) -> void:
+func _physics_process(delta: float) -> void:	
 	var is_jump_interrupted := Input.is_action_just_released("P1-JUMP") and _velocity.y < 0.0   # test if jump got interrupted (jump button released)
 	var direction := get_direction()                                                            # get player movement direction
 	_velocity = calculate_move_velocity(_velocity, direction, speed, is_jump_interrupted)       # calculate movement velocity
 	var snap := Vector2.DOWN * 60.0 if direction.y == 0.0 else Vector2.ZERO                     # snap to floor if not jumping, else don't snap
 	_velocity.y += gravity * delta                                                              # apply gravity
-
+	
 	# move player and return resulting velocity to _velocity:
 	_velocity = move_and_slide_with_snap(
 		_velocity, snap, FLOOR_NORMAL, true
 	)
+	# player cannot move on level start/restart:
+	if justStarted:
+		if is_on_floor():
+			justStarted = false
+		else:
+			position.x = 100
+	
 	animate_sprite()   # animate player sprite
 
 
@@ -99,3 +108,12 @@ func animate_sprite():
 		$AnimatedSprite.set_flip_h(true)
 	elif Input.is_action_pressed("P1-RIGHT"):
 		$AnimatedSprite.set_flip_h(false)
+
+
+
+""" KILL: kills the player """
+
+func kill() -> void:
+	position = Vector2(100.0, -55.0)   # reset player position
+	_velocity = Vector2.ZERO           # reset player velocity
+	justStarted = true                 # set justStarted so that player can't move on level restart

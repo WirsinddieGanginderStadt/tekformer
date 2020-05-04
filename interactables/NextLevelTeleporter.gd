@@ -12,4 +12,5 @@ extends StaticBody2D
 #   @param area: unused, filled in by the engine
 
 func _on_Area2D_area_entered(area):
-	get_tree().change_scene("res://levels/" + name + ".tscn")   # change scene. variable name = the name of the nextLevelTeleporter node. therefore, the nextLevelTeleporter node should be named after the next level (-> e.g. this level: 1-5, next level & node name: 1-6)
+	print("Finished Level " + get_tree().current_scene.name + " within " + get_tree().current_scene.get_node("HUD").get_node("Timer").text.replace("Timer: ", "") + " seconds.")   # log needed time
+	get_tree().current_scene.get_node("FadeOut").fadeout("res://levels/" + name + ".tscn")   # call function of fadeout node

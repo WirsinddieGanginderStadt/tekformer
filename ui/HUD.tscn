@@ -29,6 +29,7 @@ margin_bottom = 35.0
 custom_fonts/font = SubResource( 1 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Timer: 0000"
+align = 2
 __meta__ = {
 "_edit_use_anchors_": false
 }

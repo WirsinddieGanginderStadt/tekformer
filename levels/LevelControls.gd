@@ -31,12 +31,14 @@ func _physics_process(delta):
 	if $Player1.position.y > 1500:
 		kill("void")   # kill player when in the void
 
+
+
 """ _PROCESS: called once per frame when processing. """
 #    @param delta [float]: time between two frames, filled in by the engine
 
 func _process(delta: float):
 	level_timer += delta #incresing timer by delta
-	var timer_length := String(int(level_timer)).length() + 3            # calculats hole number length of level_timer +3
+	var timer_length := String(int(level_timer)).length() + 3            # calculats whole number length of level_timer +3
 	$HUD/Timer.text = "Timer: " + String(level_timer).left(timer_length) # updates Timer in Hub only showing 2 decimals
 
 

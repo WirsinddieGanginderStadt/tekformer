@@ -11,18 +11,36 @@ layer = 1
 
 [node name="Level" type="Label" parent="."]
 margin_left = 20.0
-margin_top = 48.0
-margin_right = 83.0
-margin_bottom = 66.0
+margin_top = 18.0
+margin_right = 89.0
+margin_bottom = 36.0
 custom_fonts/font = SubResource( 1 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Level: 0-0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Timer" type="Label" parent="."]
+margin_left = 920.0
+margin_top = 17.0
+margin_right = 1001.0
+margin_bottom = 35.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Timer: 0000"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Deaths" type="Label" parent="."]
-margin_left = 20.0
-margin_top = 68.0
-margin_right = 83.0
-margin_bottom = 86.0
+margin_left = 20.2848
+margin_top = 38.2848
+margin_right = 83.2848
+margin_bottom = 56.2848
 custom_fonts/font = SubResource( 1 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Deaths: 0"
+__meta__ = {
+"_edit_use_anchors_": false
+}

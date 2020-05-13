@@ -1,6 +1,6 @@
 """
 	PLAYER.GD
-	@auth tk
+	@auth tk, jm
 	@desc handles player movement
 """
 
@@ -19,7 +19,9 @@ var _velocity := Vector2.ZERO   # velocity is set to 0 at the beginning
 
 var justStarted := true   # has the game just started / restarted
 
-
+var jump_count = 0  # counts the jumps
+export var extrajumps = 1  # the number of double jumps
+var jumpforce = -1000  # the power of the double jumps
 
 """ _READY: called on object instantiation. """
 
@@ -50,6 +52,11 @@ func _physics_process(delta: float) -> void:
 			position.x = 100
 	
 	animate_sprite()   # animate player sprite
+	
+	if Input.is_action_just_pressed("P1-JUMP") && jump_count < extrajumps: # ia maximum of 1 double jump
+		_velocity.y = jumpforce # power of the double jump
+		
+
 
 
 
@@ -117,3 +124,5 @@ func kill() -> void:
 	position = Vector2(100.0, -55.0)   # reset player position
 	_velocity = Vector2.ZERO           # reset player velocity
 	justStarted = true                 # set justStarted so that player can't move on level restart
+	
+	

@@ -19,8 +19,8 @@ var _velocity := Vector2.ZERO   # velocity is set to 0 at the beginning
 
 var justStarted := true   # has the game just started / restarted
 
-var jump_count = 0  # counts the jumps
-export var extrajumps = 1  # the number of double jumps
+var jump_count = 0  # counts the jumps 
+const extrajumps = 2 # a maximum of 1 double jump
 var jumpforce = -1000  # the power of the double jumps
 
 """ _READY: called on object instantiation. """
@@ -53,10 +53,13 @@ func _physics_process(delta: float) -> void:
 	
 	animate_sprite()   # animate player sprite
 	
-	if Input.is_action_just_pressed("P1-JUMP") && jump_count < extrajumps: # ia maximum of 1 double jump
-		_velocity.y = jumpforce # power of the double jump
-		
+	if jump_count < extrajumps and Input.is_action_just_pressed("P1-JUMP"): # only double if jump_count is <2
+		_velocity.y=jumpforce # the power of the jump
+		jump_count += 1  # counts 1 after a double jump
 
+func _process(delta):
+	if is_on_floor(): # resets jump_count if the player hits the ground
+		jump_count = 0  
 
 
 
@@ -124,5 +127,3 @@ func kill() -> void:
 	position = Vector2(100.0, -55.0)   # reset player position
 	_velocity = Vector2.ZERO           # reset player velocity
 	justStarted = true                 # set justStarted so that player can't move on level restart
-	
-	

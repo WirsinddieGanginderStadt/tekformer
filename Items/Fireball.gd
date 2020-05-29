@@ -1,6 +1,10 @@
+"""
+	FIREBALL.GD
+	@auth jm
+"""
 extends Area2D
 
-const SPEED = 200
+const SPEED = 500
 var velocity = Vector2()
 var direction = 1
 

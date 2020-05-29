@@ -1,6 +1,6 @@
 """
 	SLIME.GD
-	@auth tk
+	@auth tk, jm
 	@desc handles slime behaviour.
 """
 
@@ -94,3 +94,14 @@ func reset():
 	dead = false
 	animate_sprite()
 	update_collisions()
+
+
+func dead():
+	dead = true
+	speed = Vector2(0, 0)
+	$AnimatedSprite.play("dead")
+	$Timer.start()
+
+
+func _on_Timer_timeout() -> void:
+	queue_free()

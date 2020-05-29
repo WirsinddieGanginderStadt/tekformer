@@ -56,5 +56,9 @@ shape = SubResource( 3 )
 [node name="CollisionShapeAlive" type="CollisionShape2D" parent="."]
 position = Vector2( 0, 0.709 )
 shape = SubResource( 4 )
+
+[node name="Timer" type="Timer" parent="."]
+one_shot = true
 [connection signal="area_entered" from="Area2D_Side" to="." method="_on_Area2D_Side_area_entered"]
 [connection signal="area_entered" from="Area2D_Top" to="." method="_on_Area2D_Top_area_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]

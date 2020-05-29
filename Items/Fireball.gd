@@ -25,7 +25,7 @@ func _on_VisibilityNotifier2D_screen_exited() -> void:
 
 
 func _on_Fireball_body_entered(body: Node) -> void:
-	if "SLime" in body.name:
+	if "Slime" in body.name:
 		body.dead()
 	queue_free()
 	

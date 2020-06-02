@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://levels/LevelControls.gd" type="Script" id=1]
 [ext_resource path="res://levels/ParallaxBackground1.tscn" type="PackedScene" id=2]
@@ -8,6 +8,7 @@
 [ext_resource path="res://ui/HUD.tscn" type="PackedScene" id=6]
 [ext_resource path="res://actors/enemies/SlimeGreen.tscn" type="PackedScene" id=7]
 [ext_resource path="res://ui/Fade/FadeIn.tscn" type="PackedScene" id=8]
+[ext_resource path="res://ui/PauseScreen.tscn" type="PackedScene" id=9]
 
 [node name="1-10" type="Node2D"]
 script = ExtResource( 1 )
@@ -33,3 +34,8 @@ position = Vector2( 98, -56 )
 
 [node name="SlimeGreen" parent="Enemies" instance=ExtResource( 7 )]
 position = Vector2( 2063.03, 403.305 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="PauseScreen" parent="CanvasLayer" instance=ExtResource( 9 )]
+visible = false

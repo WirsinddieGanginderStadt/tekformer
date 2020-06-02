@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://levels/LevelControls.gd" type="Script" id=1]
 [ext_resource path="res://levels/ParallaxBackground1.tscn" type="PackedScene" id=2]
@@ -10,6 +10,7 @@
 [ext_resource path="res://ui/Fade/FadeOut.tscn" type="PackedScene" id=8]
 [ext_resource path="res://ui/HUD.tscn" type="PackedScene" id=9]
 [ext_resource path="res://ui/Fade/FadeIn.tscn" type="PackedScene" id=10]
+[ext_resource path="res://ui/PauseScreen.tscn" type="PackedScene" id=11]
 
 [node name="1-6" type="Node2D"]
 script = ExtResource( 1 )
@@ -58,3 +59,8 @@ rotation = 0.785398
 position = Vector2( 4484.13, 120.792 )
 
 [node name="HUD" parent="." instance=ExtResource( 9 )]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="PauseScreen" parent="CanvasLayer" instance=ExtResource( 11 )]
+visible = false

@@ -58,7 +58,7 @@ shape = SubResource( 1 )
 light_mask = 0
 frames = SubResource( 3 )
 frame = 1
-speed_scale = 0.1
+playing = true
 
 [node name="Camera2D" type="Camera2D" parent="."]
 offset = Vector2( 150, 0 )

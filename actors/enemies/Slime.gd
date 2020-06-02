@@ -1,6 +1,6 @@
 """
 	SLIME.GD
-	@auth tk
+	@auth tk, jm
 	@desc handles slime behaviour.
 """
 
@@ -14,6 +14,7 @@ var defaultSpeed := Vector2(-2500.0, 0.0)   # default speed
 
 var speed := defaultSpeed   # current speed
 var dead  := false   # is the slime dead? used for sprite animations & collision behaviour
+
 
 
 
@@ -38,12 +39,13 @@ func _physics_process(delta: float) -> void:
 
 
 
-""" _ON_AREA2D_SIDE_AREA_ENTERED: detects side collisions with other area2d's """
+""" _ON_AREA2D_SIDE_BODY_ENTERED: detects side collisions with a body """
 #   @param area: area of the collision object. unused.
 
-func _on_Area2D_Side_area_entered(area):
+func _on_Area2D_Side_body_entered(body: Node) -> void:
 	if not dead:
 		get_tree().get_current_scene().kill("kill: slime")   # kill the player
+
 
 
 
@@ -69,6 +71,7 @@ func animate_sprite() -> void:
 			$AnimatedSprite.flip_h = false
 	else:
 		$AnimatedSprite.play("dead")
+		$Timer.start()
 
 
 
@@ -94,3 +97,16 @@ func reset():
 	dead = false
 	animate_sprite()
 	update_collisions()
+
+
+func dead():
+	dead = true
+	animate_sprite()
+	update_collisions()
+
+
+
+func _on_Timer_timeout() -> void:
+	queue_free()
+
+

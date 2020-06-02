@@ -12,6 +12,8 @@ extends KinematicBody2D
 
 const FLOOR_NORMAL := Vector2.UP   # normal floor direction (required in order to function)
 
+const FIREBALL = preload("res://Items/Fireball.tscn")
+
 export var speed := Vector2(700.0, 1300.0)   # max speed of the player - can be altered in the inspector, tab "script variables"
 export var gravity := 3500.0   # speed of the player - can be altered in the inspector, tab "script variables"
 
@@ -56,6 +58,23 @@ func _physics_process(delta: float) -> void:
 	if jump_count < extrajumps and Input.is_action_just_pressed("P1-JUMP"): # only double if jump_count is <2
 		_velocity.y=jumpforce # the power of the jump
 		jump_count += 1  # counts 1 after a double jump
+	
+	if Input.is_action_just_pressed("P1-RIGHT"): #direction of the player
+		if sign($Position2D.position.x) == -1:
+			$Position2D.position.x *= -1
+			
+	if Input.is_action_just_pressed("P1-LEFT"): #directoin of the player
+		if sign($Position2D.position.x) == 1:
+			$Position2D.position.x *= -1
+	
+	if Input.is_action_just_pressed("ui_accept"): #if accept is pressed the player shoots a fireball
+		var fireball = FIREBALL.instance() 
+		if sign($Position2D.position.x) == 1:
+			fireball.set_fireball_direction(1)
+		else:
+			fireball.set_fireball_direction(-1)
+		get_parent().add_child(fireball)
+		fireball.position = $Position2D.global_position
 
 func _process(delta):
 	if is_on_floor(): # resets jump_count if the player hits the ground

@@ -26,9 +26,6 @@ cell_size = Vector2( 70, 70 )
 format = 1
 tile_data = PoolIntArray( 131079, 15, 0, 131089, 15, 0, 196615, 0, 0, 196625, 0, 0, 196632, 0, 0, 262154, 0, 0, 262176, 16, 0, 262199, 0, 0, 262231, 0, 0, 327681, 16, 0, 327684, 0, 0, 327693, 0, 0, 327712, 0, 0, 327721, 0, 0, 327758, 16, 0, 327775, 0, 0, 458751, 7, 0, 393216, 2, 0, 393217, 2, 0, 393218, 8, 0, 393265, 0, 0, 393281, 0, 0, 393287, 0, 0, 393294, 0, 0 )
 
-[node name="NextLevelTeleporter" parent="TileMap" instance=ExtResource( 8 )]
-position = Vector2( 6683.59, 351.714 )
-
 [node name="Player1" parent="." instance=ExtResource( 4 )]
 position = Vector2( 98, -56 )
 
@@ -41,3 +38,6 @@ visible = false
 
 [node name="PauseScreen" parent="CanvasLayer" instance=ExtResource( 9 )]
 visible = false
+
+[node name="NextLevelTeleporter" parent="." instance=ExtResource( 8 )]
+position = Vector2( 6683.59, 351.714 )

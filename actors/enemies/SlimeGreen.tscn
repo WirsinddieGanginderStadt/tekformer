@@ -7,11 +7,6 @@
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
-"frames": [ ExtResource( 4 ) ],
-"loop": true,
-"name": "dead",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 2 ) ],
 "loop": true,
 "name": "stand",
@@ -21,10 +16,15 @@ animations = [ {
 "loop": true,
 "name": "walk",
 "speed": 5.0
+}, {
+"frames": [ ExtResource( 4 ) ],
+"loop": true,
+"name": "dead",
+"speed": 5.0
 } ]
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 18.6803, 16.1874 )
+extents = Vector2( 29.0554, 16.1874 )
 
 [sub_resource type="RectangleShape2D" id=3]
 extents = Vector2( 18, 0.804782 )
@@ -53,7 +53,7 @@ position = Vector2( 0.0537338, -16.0396 )
 shape = SubResource( 3 )
 
 [node name="CollisionShapeAlive" type="CollisionShape2D" parent="."]
-position = Vector2( 0, 0.709 )
+position = Vector2( 0, 1.06749 )
 shape = SubResource( 4 )
 
 [node name="Timer" type="Timer" parent="."]

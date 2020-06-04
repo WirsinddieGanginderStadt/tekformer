@@ -1,12 +1,14 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=8 format=2]
 
-[ext_resource path="res://assets/textures/items/Fireball/Fireball2.png" type="Texture" id=1]
-[ext_resource path="res://assets/textures/items/Fireball/Fireball1.png" type="Texture" id=2]
+[ext_resource path="res://assets/textures/items/fireball/fireball1.png" type="Texture" id=1]
+[ext_resource path="res://assets/textures/items/fireball/fireball3.png" type="Texture" id=2]
 [ext_resource path="res://Items/Fireball.gd" type="Script" id=3]
+[ext_resource path="res://assets/textures/items/fireball/fireball4.png" type="Texture" id=4]
+[ext_resource path="res://assets/textures/items/fireball/fireball2.png" type="Texture" id=5]
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
-"frames": [ ExtResource( 2 ), ExtResource( 1 ) ],
+"frames": [ ExtResource( 1 ), ExtResource( 5 ), ExtResource( 2 ), ExtResource( 4 ) ],
 "loop": true,
 "name": "shoot",
 "speed": 12.0
@@ -19,10 +21,9 @@ extents = Vector2( 27.5521, 18.8488 )
 script = ExtResource( 3 )
 
 [node name="AnimatedSprite" type="AnimatedSprite" parent="."]
-scale = Vector2( 4.80473, 5.24119 )
+scale = Vector2( 1.5, 1.5 )
 frames = SubResource( 1 )
 animation = "shoot"
-frame = 1
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 position = Vector2( 7, 0 )

@@ -45,14 +45,12 @@ position = Vector2( 4801.04, 126.011 )
 
 [node name="SlimeGreen2" parent="Enemies" instance=ExtResource( 7 )]
 position = Vector2( 5496.21, 264.347 )
-motion/sync_to_physics = true
 
 [node name="SlimeGreen3" parent="Enemies" instance=ExtResource( 7 )]
 position = Vector2( 2006.43, 405.782 )
 
 [node name="SlimeGreen4" parent="Enemies" instance=ExtResource( 7 )]
 position = Vector2( 3300.27, 194.791 )
-motion/sync_to_physics = true
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 

@@ -2,7 +2,7 @@
 
 [ext_resource path="res://levels/LevelControls.gd" type="Script" id=1]
 [ext_resource path="res://levels/ParallaxBackground1.tscn" type="PackedScene" id=2]
-[ext_resource path="res://tilesets/world1.tres" type="TileSet" id=3]
+[ext_resource path="res://tilesets/world2.tres" type="TileSet" id=3]
 [ext_resource path="res://actors/Player.tscn" type="PackedScene" id=4]
 [ext_resource path="res://ui/Fade/FadeOut.tscn" type="PackedScene" id=5]
 [ext_resource path="res://ui/HUD.tscn" type="PackedScene" id=6]
@@ -17,13 +17,13 @@ script = ExtResource( 1 )
 [node name="FadeIn" parent="." instance=ExtResource( 7 )]
 
 [node name="FadeOut" parent="." instance=ExtResource( 5 )]
-position = Vector2( -1.50732, 0 )
+position = Vector2( -10.2977, -1.75818 )
 
 [node name="TileMap" type="TileMap" parent="."]
 tile_set = ExtResource( 3 )
 cell_size = Vector2( 70, 70 )
 format = 1
-tile_data = PoolIntArray( 262176, 16, 0, 327681, 16, 0, 393217, 0, 0 )
+tile_data = PoolIntArray( 262176, 16, 0, 327681, 13, 0, 393217, 0, 0 )
 
 [node name="Player1" parent="." instance=ExtResource( 4 )]
 position = Vector2( 98, -56 )

@@ -1,7 +1,6 @@
 """
 Coin.gd
 @auth jm
-
 """
 extends Area2D
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://assets/fonts/SF-Pro-Text-Regular.otf" type="DynamicFontData" id=1]
 [ext_resource path="res://ui/FPS.gd" type="Script" id=2]
@@ -6,6 +6,13 @@
 [sub_resource type="DynamicFont" id=1]
 size = 14
 font_data = ExtResource( 1 )
+
+[sub_resource type="DynamicFontData" id=2]
+font_path = "res://assets/fonts/SF-Pro-Text-Regular.otf"
+
+[sub_resource type="DynamicFont" id=3]
+size = 14
+font_data = SubResource( 2 )
 
 [node name="HUD" type="ParallaxBackground"]
 layer = 1
@@ -49,6 +56,10 @@ __meta__ = {
 [node name="MarginContainer" type="MarginContainer" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
+margin_left = 10.0
+margin_top = -8.0
+margin_right = 10.0
+margin_bottom = -8.0
 custom_constants/margin_right = 10
 custom_constants/margin_top = 10
 custom_constants/margin_left = 10
@@ -65,14 +76,19 @@ margin_right = 1014.0
 margin_bottom = 590.0
 
 [node name="VBoxContainer" type="VBoxContainer" parent="MarginContainer/HBoxContainer"]
-margin_right = 22.0
+margin_right = 26.0
 margin_bottom = 580.0
 alignment = 2
 
 [node name="Label" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer"]
 modulate = Color( 0, 0, 0, 1 )
 self_modulate = Color( 0, 0, 0, 1 )
-margin_top = 566.0
-margin_right = 22.0
+anchor_left = 0.423077
+anchor_top = -0.0137931
+anchor_right = 0.423077
+anchor_bottom = -0.0137931
+margin_top = 562.0
+margin_right = 26.0
 margin_bottom = 580.0
+custom_fonts/font = SubResource( 3 )
 text = "FPS"

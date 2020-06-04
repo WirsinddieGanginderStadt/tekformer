@@ -13,13 +13,22 @@ extends Node2D
 var deaths := 0   # amount of deaths
 var level_timer := 0.0 # timer 
 
-export var skin := 0 # skin
+var _skin := 0 # skin
+var config = ConfigFile.new()
+
+
 
 
 """ _READY: called on object instantiation. """
 
 func _ready():
-	$Player1.skin = skin
+	config.load("config.cfg")
+	_skin = config.get_value("player", "skin", 0)
+	print(config.has_section("player"))
+	config.save("config.cfg")
+	
+	$Player1.skin = _skin
+	
 	print("[level]: ", name)             # log level to console
 	$HUD/Level.text = "Level: " + name   # show current level in hud
 	level_timer = 0.0 # reseting timer

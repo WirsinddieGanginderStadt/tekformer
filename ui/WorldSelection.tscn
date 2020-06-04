@@ -158,19 +158,19 @@ margin_bottom = 36.0
 custom_fonts/font = SubResource( 1 )
 text = "World 8"
 
-[node name="ParallaxBackground" parent="." instance=ExtResource( 6 )]
-
-[node name="OptionButton" type="OptionButton" parent="ParallaxBackground"]
-margin_left = 606.0
-margin_top = 457.0
-margin_right = 791.0
-margin_bottom = 492.0
+[node name="Skin_OptionButton" type="OptionButton" parent="Buttons"]
+margin_left = 585.0
+margin_top = 471.0
+margin_right = 898.0
+margin_bottom = 525.0
 text = "Skin"
 icon = ExtResource( 2 )
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="ParallaxBackground" parent="." instance=ExtResource( 6 )]
 [connection signal="button_down" from="Buttons/1" to="Buttons/1" method="_on_TextureButton_button_down"]
 [connection signal="button_down" from="Buttons/2" to="Buttons/2" method="_on_TextureButton_button_down"]
 [connection signal="button_down" from="Buttons/3" to="Buttons/3" method="_on_TextureButton_button_down"]

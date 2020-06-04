@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://ui/SkinSelection.gd" type="Script" id=1]
 [ext_resource path="res://assets/ui/button1.png" type="Texture" id=2]
@@ -6,6 +6,8 @@
 [ext_resource path="res://ui/WorldSelection.gd" type="Script" id=4]
 [ext_resource path="res://assets/fonts/SF-Pro-Text-Regular.otf" type="DynamicFontData" id=5]
 [ext_resource path="res://levels/ParallaxBackground1.tscn" type="PackedScene" id=6]
+[ext_resource path="res://assets/textures/sprites/player/Poses/player_idle.png" type="Texture" id=7]
+[ext_resource path="res://assets/textures/sprites/female/Poses/female_idle.png" type="Texture" id=8]
 
 [sub_resource type="DynamicFont" id=1]
 size = 20
@@ -164,11 +166,18 @@ margin_top = 471.0
 margin_right = 898.0
 margin_bottom = 525.0
 text = "Skin"
-icon = ExtResource( 2 )
 script = ExtResource( 1 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="Male1" type="Sprite" parent="Buttons/Skin_OptionButton"]
+position = Vector2( 139.12, -135.237 )
+texture = ExtResource( 7 )
+
+[node name="Female1" type="Sprite" parent="Buttons/Skin_OptionButton"]
+position = Vector2( 139.12, -135.237 )
+texture = ExtResource( 8 )
 
 [node name="ParallaxBackground" parent="." instance=ExtResource( 6 )]
 [connection signal="button_down" from="Buttons/1" to="Buttons/1" method="_on_TextureButton_button_down"]

@@ -42,16 +42,16 @@ position = Vector2( 98, -56 )
 position = Vector2( 5182.06, 544.88 )
 
 [node name="SlimeGreen" parent="Enemies" instance=ExtResource( 12 )]
-position = Vector2( 4550.85, 542.952 )
+position = Vector2( 4552.48, 539.282 )
 
 [node name="Spinner2" parent="Enemies" instance=ExtResource( 10 )]
 position = Vector2( 1467.86, 335.342 )
 
 [node name="SlimeGreen2" parent="Enemies" instance=ExtResource( 12 )]
-position = Vector2( 767.814, 405.443 )
+position = Vector2( 766.199, 399.699 )
 
 [node name="SlimeGreen3" parent="Enemies" instance=ExtResource( 12 )]
-position = Vector2( 2227.72, 264.981 )
+position = Vector2( 2226.82, 260.462 )
 motion/sync_to_physics = true
 
 [node name="Spinner3" parent="Enemies" instance=ExtResource( 11 )]
@@ -64,7 +64,7 @@ position = Vector2( 5714.13, 263.662 )
 position = Vector2( 5910.15, 264.46 )
 
 [node name="SlimeGreen4" parent="Enemies" instance=ExtResource( 12 )]
-position = Vector2( 1150.54, 196.26 )
+position = Vector2( 1151.9, 190.838 )
 motion/sync_to_physics = true
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]

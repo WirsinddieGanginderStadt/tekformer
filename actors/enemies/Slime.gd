@@ -36,6 +36,7 @@ func _physics_process(delta: float) -> void:
 		elif position.x > defaultPos.x and speed.x > 0:       # slime is behind (+x direction) the original position
 			speed.x = -speed.x                                # flip movement direction
 		animate_sprite()
+	set_sync_to_physics(false)
 
 
 

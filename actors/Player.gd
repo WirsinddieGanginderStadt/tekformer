@@ -25,6 +25,8 @@ var jump_count = 0  # counts the jumps
 const extrajumps = 2 # a maximum of 1 double jump
 var jumpforce = -1000  # the power of the double jumps
 
+export var skin := 0 #selected Skin 
+
 """ _READY: called on object instantiation. """
 
 func _ready():
@@ -53,7 +55,7 @@ func _physics_process(delta: float) -> void:
 		else:
 			position.x = 100
 	
-	animate_sprite()   # animate player sprite
+	animate_sprite(skin)   # animate player sprite
 	
 	if jump_count < extrajumps and Input.is_action_just_pressed("P1-JUMP"): # only double if jump_count is <2
 		_velocity.y=jumpforce # the power of the jump
@@ -115,30 +117,65 @@ func calculate_move_velocity(current_velocity: Vector2, direction: Vector2, spee
 
 """ ANIMATE: animates the player sprite """
 
-func animate_sprite():
+func animate_sprite(_skin: int):
 	# play animations depending on current state. should be self-explanatory.
-	if _velocity.y < 0:
-		$AnimatedSprite.play("jump")
-	elif _velocity.y > 0 and Input.is_action_pressed("P1-JUMP"):
-		$AnimatedSprite.play("jump")
-	elif _velocity.y > 0:
-		$AnimatedSprite.play("fall")
-	elif Input.is_action_pressed("P1-LEFT") and Input.is_action_pressed("P1-RIGHT"):
-		$AnimatedSprite.play("stand")
-	elif Input.is_action_pressed("P1-LEFT"):
-		$AnimatedSprite.play("walk")
-	elif Input.is_action_pressed("P1-RIGHT"):
-		$AnimatedSprite.play("walk")
-	else:
-		$AnimatedSprite.play("stand")
-
-	# flip sprite depending on where the player faces/goes to
-	if Input.is_action_pressed("P1-LEFT") and Input.is_action_pressed("P1-RIGHT"):
-		pass   # skip if block if both left and right buttons are pressed
-	elif Input.is_action_pressed("P1-LEFT"):
-		$AnimatedSprite.set_flip_h(true)
-	elif Input.is_action_pressed("P1-RIGHT"):
-		$AnimatedSprite.set_flip_h(false)
+	$AnimatedSpriteMale1.visible = false
+	$AnimatedSpriteFemale1.visible = false
+	if skin == 0:
+		
+		$AnimatedSpriteMale1.visible = true
+		
+	
+		if _velocity.y < 0:
+			$AnimatedSpriteMale1.play("jump")
+		elif _velocity.y > 0 and Input.is_action_pressed("P1-JUMP"):
+			$AnimatedSpriteMale1.play("jump")
+		elif _velocity.y > 0:
+			$AnimatedSpriteMale1.play("fall")
+		elif Input.is_action_pressed("P1-LEFT") and Input.is_action_pressed("P1-RIGHT"):
+			$AnimatedSpriteMale1.play("stand")
+		elif Input.is_action_pressed("P1-LEFT"):
+			$AnimatedSpriteMale1.play("walk")
+		elif Input.is_action_pressed("P1-RIGHT"):
+			$AnimatedSpriteMale1.play("walk")
+		else:
+			$AnimatedSpriteMale1.play("stand")
+	
+		# flip sprite depending on where the player faces/goes to
+		if Input.is_action_pressed("P1-LEFT") and Input.is_action_pressed("P1-RIGHT"):
+			pass   # skip if block if both left and right buttons are pressed
+		elif Input.is_action_pressed("P1-LEFT"):
+			$AnimatedSpriteMale1.set_flip_h(true)
+		elif Input.is_action_pressed("P1-RIGHT"):
+			$AnimatedSpriteMale1.set_flip_h(false)
+			
+			
+	if skin == 1:
+		
+		$AnimatedSpriteFemale1.visible = true
+	
+		if _velocity.y < 0:
+			$AnimatedSpriteFemale1.play("jump")
+		elif _velocity.y > 0 and Input.is_action_pressed("P1-JUMP"):
+			$AnimatedSpriteFemale1.play("jump")
+		elif _velocity.y > 0:
+			$AnimatedSpriteFemale1.play("fall")
+		elif Input.is_action_pressed("P1-LEFT") and Input.is_action_pressed("P1-RIGHT"):
+			$AnimatedSpriteFemale1.play("stand")
+		elif Input.is_action_pressed("P1-LEFT"):
+			$AnimatedSpriteFemale1.play("walk")
+		elif Input.is_action_pressed("P1-RIGHT"):
+			$AnimatedSpriteFemale1.play("walk")
+		else:
+			$AnimatedSpriteFemale1.play("stand")
+	
+		# flip sprite depending on where the player faces/goes to
+		if Input.is_action_pressed("P1-LEFT") and Input.is_action_pressed("P1-RIGHT"):
+			pass   # skip if block if both left and right buttons are pressed
+		elif Input.is_action_pressed("P1-LEFT"):
+			$AnimatedSpriteFemale1.set_flip_h(true)
+		elif Input.is_action_pressed("P1-RIGHT"):
+			$AnimatedSpriteFemale1.set_flip_h(false)
 
 
 

@@ -42,9 +42,10 @@ func _physics_process(delta: float) -> void:
 """ _ON_AREA2D_SIDE_BODY_ENTERED: detects side collisions with a body """
 #   @param area: area of the collision object. unused.
 
-func _on_Area2D_Side_body_entered(body: Node) -> void:
+func _on_Area2D_Side_body_entered(body) -> void:
 	if not dead:
-		get_tree().get_current_scene().kill("kill: slime")   # kill the player
+		if body.name == "Player1":
+			get_tree().get_current_scene().kill("kill: slime")   # kill the player
 
 
 

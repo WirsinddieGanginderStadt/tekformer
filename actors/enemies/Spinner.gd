@@ -11,7 +11,8 @@ extends StaticBody2D
 #   @param area: unused, filled in by the engine
 
 func _on_Area2D_body_entered(body: Node) -> void:
-	get_tree().get_current_scene().kill("kill: spinner")   # send kill request to LevelControls
+	if body.name == "Player1":
+		get_tree().get_current_scene().kill("kill: spinner")   # send kill request to LevelControls
 
 
 

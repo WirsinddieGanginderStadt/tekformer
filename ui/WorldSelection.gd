@@ -6,7 +6,7 @@
 
 extends TextureButton
 
-
+var skin := 1
 
 """ _ON_TEXTUREBUTTON_BUTTON_DOWN: detects a click on the button """
 

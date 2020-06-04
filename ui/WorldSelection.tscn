@@ -1,5 +1,6 @@
-[gd_scene load_steps=7 format=2]
+[gd_scene load_steps=8 format=2]
 
+[ext_resource path="res://ui/SkinSelection.gd" type="Script" id=1]
 [ext_resource path="res://assets/ui/button1.png" type="Texture" id=2]
 [ext_resource path="res://assets/ui/button1 hover.png" type="Texture" id=3]
 [ext_resource path="res://ui/WorldSelection.gd" type="Script" id=4]
@@ -158,6 +159,18 @@ custom_fonts/font = SubResource( 1 )
 text = "World 8"
 
 [node name="ParallaxBackground" parent="." instance=ExtResource( 6 )]
+
+[node name="OptionButton" type="OptionButton" parent="ParallaxBackground"]
+margin_left = 606.0
+margin_top = 457.0
+margin_right = 791.0
+margin_bottom = 492.0
+text = "Skin"
+icon = ExtResource( 2 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 [connection signal="button_down" from="Buttons/1" to="Buttons/1" method="_on_TextureButton_button_down"]
 [connection signal="button_down" from="Buttons/2" to="Buttons/2" method="_on_TextureButton_button_down"]
 [connection signal="button_down" from="Buttons/3" to="Buttons/3" method="_on_TextureButton_button_down"]

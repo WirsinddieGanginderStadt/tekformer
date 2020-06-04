@@ -1,6 +1,6 @@
 """
 	PLAYER.GD
-	@auth tk, jm
+	@auth tk, jm , ds
 	@desc handles player movement
 """
 

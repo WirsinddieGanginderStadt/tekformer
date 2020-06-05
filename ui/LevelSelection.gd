@@ -20,17 +20,11 @@ func load_game():
 	data = parse_json(text)
 	file.close()
 
-
-func save_game():
-	var file
-	file = File.new()
-	file.open(path, File.WRITE)
-	file.store_line(to_json(data))
-	file.close()
-
 func button_disabled():
+	if data["world1"]["1-2"] == true:
+		get_tree().current_scene.get_node("Overlay2").visible = true
 	if data["world1"]["1-2"] == false:
-		$Buttons/TextureButton.visible = true
+		get_tree().current_scene.get_node("Overlay2").visible = false
 
 """ _ON_TEXTUREBUTTON_BUTTON_DOWN: detects a click on the button """
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://levels/LevelControls.gd" type="Script" id=1]
 [ext_resource path="res://levels/ParallaxBackground1.tscn" type="PackedScene" id=2]
@@ -7,6 +7,7 @@
 [ext_resource path="res://ui/Fade/FadeOut.tscn" type="PackedScene" id=5]
 [ext_resource path="res://ui/HUD.tscn" type="PackedScene" id=6]
 [ext_resource path="res://ui/Fade/FadeIn.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Objects/AllCoins.tscn" type="PackedScene" id=8]
 [ext_resource path="res://ui/PauseScreen.tscn" type="PackedScene" id=9]
 
 [node name="1-12" type="Node2D"]
@@ -37,3 +38,5 @@ visible = false
 
 [node name="PauseScreen" parent="CanvasLayer" instance=ExtResource( 9 )]
 visible = false
+
+[node name="AllCoins" parent="." instance=ExtResource( 8 )]

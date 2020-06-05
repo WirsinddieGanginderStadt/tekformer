@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://levels/LevelControls.gd" type="Script" id=1]
 [ext_resource path="res://levels/ParallaxBackground1.tscn" type="PackedScene" id=2]
@@ -9,6 +9,7 @@
 [ext_resource path="res://ui/Fade/FadeIn.tscn" type="PackedScene" id=7]
 [ext_resource path="res://interactables/NextLevelTeleporter.tscn" type="PackedScene" id=8]
 [ext_resource path="res://ui/PauseScreen.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Objects/AllCoins.tscn" type="PackedScene" id=10]
 
 [node name="1-12" type="Node2D"]
 script = ExtResource( 1 )
@@ -40,3 +41,5 @@ visible = false
 
 [node name="NextLevelTeleporter" parent="." instance=ExtResource( 8 )]
 position = Vector2( 6683.59, 351.714 )
+
+[node name="AllCoins" parent="." instance=ExtResource( 10 )]

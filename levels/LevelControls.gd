@@ -12,6 +12,7 @@ extends Node2D
 
 var deaths := 0   # amount of deaths
 var level_timer := 0.0 # timer 
+var _coins_collected := 0
 
 var _skin := 0 # skin
 var config = ConfigFile.new()
@@ -48,6 +49,8 @@ func _physics_process(delta):
 #    @param delta [float]: time between two frames, filled in by the engine
 
 func _process(delta: float):
+	_coins_collected = $AllCoins.coins_collected 
+	$HUD/Coins.text = "Coins: " + String(_coins_collected)
 	level_timer += delta #incresing timer by delta
 	var timer_length := String(int(level_timer)).length() + 3            # calculats whole number length of level_timer +3
 	$HUD/Timer.text = "Timer: " + String(level_timer).left(timer_length) # updates Timer in Hub only showing 2 decimals

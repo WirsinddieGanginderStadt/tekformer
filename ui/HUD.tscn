@@ -83,12 +83,18 @@ alignment = 2
 [node name="Label" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer"]
 modulate = Color( 0, 0, 0, 1 )
 self_modulate = Color( 0, 0, 0, 1 )
-anchor_left = 0.423077
-anchor_top = -0.0137931
-anchor_right = 0.423077
-anchor_bottom = -0.0137931
 margin_top = 562.0
 margin_right = 26.0
 margin_bottom = 580.0
 custom_fonts/font = SubResource( 3 )
 text = "FPS"
+
+[node name="Coins" type="Label" parent="."]
+margin_left = 930.65
+margin_top = 46.7319
+margin_right = 991.65
+margin_bottom = 65.7319
+text = "Coins:"
+__meta__ = {
+"_edit_use_anchors_": false
+}

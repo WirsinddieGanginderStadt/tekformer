@@ -189,6 +189,8 @@ position = Vector2( 157, -148 )
 scale = Vector2( 1.5, 1.5 )
 texture = ExtResource( 8 )
 
+[node name="Adventurer1" type="Sprite" parent="Buttons/Skin_OptionButton"]
+
 [node name="ParallaxBackground" parent="." instance=ExtResource( 6 )]
 [connection signal="button_down" from="Buttons/1" to="Buttons/1" method="_on_TextureButton_button_down"]
 [connection signal="button_down" from="Buttons/2" to="Buttons/2" method="_on_TextureButton_button_down"]

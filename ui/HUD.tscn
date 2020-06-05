@@ -1,11 +1,7 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=5 format=2]
 
-[ext_resource path="res://assets/fonts/SF-Pro-Text-Regular.otf" type="DynamicFontData" id=1]
+[ext_resource path="res://assets/fonts/HUD.tres" type="DynamicFont" id=1]
 [ext_resource path="res://ui/FPS.gd" type="Script" id=2]
-
-[sub_resource type="DynamicFont" id=1]
-size = 14
-font_data = ExtResource( 1 )
 
 [sub_resource type="DynamicFontData" id=2]
 font_path = "res://assets/fonts/SF-Pro-Text-Regular.otf"
@@ -22,7 +18,7 @@ margin_left = 20.0
 margin_top = 18.0
 margin_right = 89.0
 margin_bottom = 36.0
-custom_fonts/font = SubResource( 1 )
+custom_fonts/font = ExtResource( 1 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Level: 0-0"
 __meta__ = {
@@ -34,7 +30,7 @@ margin_left = 920.0
 margin_top = 17.0
 margin_right = 1001.0
 margin_bottom = 35.0
-custom_fonts/font = SubResource( 1 )
+custom_fonts/font = ExtResource( 1 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Timer: 0000"
 __meta__ = {
@@ -46,7 +42,7 @@ margin_left = 20.2848
 margin_top = 38.2848
 margin_right = 83.2848
 margin_bottom = 56.2848
-custom_fonts/font = SubResource( 1 )
+custom_fonts/font = ExtResource( 1 )
 custom_colors/font_color = Color( 0, 0, 0, 1 )
 text = "Deaths: 0"
 __meta__ = {
@@ -83,12 +79,20 @@ alignment = 2
 [node name="Label" type="Label" parent="MarginContainer/HBoxContainer/VBoxContainer"]
 modulate = Color( 0, 0, 0, 1 )
 self_modulate = Color( 0, 0, 0, 1 )
-anchor_left = 0.423077
-anchor_top = -0.0137931
-anchor_right = 0.423077
-anchor_bottom = -0.0137931
 margin_top = 562.0
 margin_right = 26.0
 margin_bottom = 580.0
 custom_fonts/font = SubResource( 3 )
 text = "FPS"
+
+[node name="Coins" type="Label" parent="."]
+margin_left = 921.0
+margin_top = 45.0
+margin_right = 1002.0
+margin_bottom = 62.0
+rect_pivot_offset = Vector2( 499.201, 376.269 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Coins:"
+__meta__ = {
+"_edit_use_anchors_": false
+}

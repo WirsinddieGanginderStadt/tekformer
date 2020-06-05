@@ -42,4 +42,3 @@ func _on_Area2D_body_entered(body: Node) -> void:
 		else:
 			edit_level()
 			save_game()
-	

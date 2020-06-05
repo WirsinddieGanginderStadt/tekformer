@@ -32,6 +32,7 @@ func _on_TextureButton2_pressed() -> void:
 
 
 func _on_TextureButton3_pressed() -> void: 
+	get_tree().paused = not get_tree().paused 
 	get_tree().change_scene("res://ui/WorldSelection.tscn")
 
 

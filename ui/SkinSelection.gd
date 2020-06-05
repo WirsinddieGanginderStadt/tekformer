@@ -16,6 +16,7 @@ var config = ConfigFile.new()
 func _ready():
 	add_item("Hans", 0)
 	add_item("Kara", 1)
+	add_item("Indi", 2)
 	
 	$Female1.visible = false
 	$Male1.visible = false
@@ -36,10 +37,18 @@ func writing_skin_in_config(_skin_cfg: int):
 func displaying_Skin(_skin_to_display: int):
 	$Female1.visible = false
 	$Male1.visible = false
+	$Adventurer1.visible = false
+	
 	if _skin_to_display == 0:
 		$Male1.visible = true
 		$Female1.visible = false
+		$Adventurer1.visible = false
 	if _skin_to_display == 1:
 		$Male1.visible = false
 		$Female1.visible = true
+		$Adventurer1.visible = false
+	if _skin_to_display == 2:
+		$Male1.visible = false
+		$Female1.visible = false
+		$Adventurer1.visible = true
 

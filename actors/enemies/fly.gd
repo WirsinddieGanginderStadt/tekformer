@@ -35,7 +35,7 @@ func _physics_process(delta: float) -> void:
 		elif position.x > defaultPos.x and speed.x > 0:       # fly is behind (+x direction) the original position
 			speed.x = -speed.x                                # flip movement direction
 		animate_sprite()
-	set_sync_to_physics(false)
+
 
 
 
@@ -57,9 +57,6 @@ func animate_sprite() -> void:
 			$AnimatedSprite.flip_h = true
 		elif speed.x < 0:
 			$AnimatedSprite.flip_h = false
-	else:
-		$AnimatedSprite.play("dead")
-		$Timer.start()
 
 
 

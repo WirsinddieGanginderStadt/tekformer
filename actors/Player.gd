@@ -25,7 +25,7 @@ var jump_count = 0  # counts the jumps
 const extrajumps = 2 # a maximum of 1 double jump
 var jumpforce = -1000  # the power of the double jumps
 
-export var skin := 0 #selected Skin 
+export var skin := 0 #selected Skin(0:Hans;1:Kara;2:Indi)
 
 """ _READY: called on object instantiation. """
 
@@ -121,6 +121,7 @@ func animate_sprite(_skin: int):
 	# play animations depending on current state. should be self-explanatory.
 	$AnimatedSpriteMale1.visible = false
 	$AnimatedSpriteFemale1.visible = false
+	$AnimatedSpriteAdventurer1.visible = false
 	if skin == 0:
 		
 		$AnimatedSpriteMale1.visible = true
@@ -176,6 +177,32 @@ func animate_sprite(_skin: int):
 			$AnimatedSpriteFemale1.set_flip_h(true)
 		elif Input.is_action_pressed("P1-RIGHT"):
 			$AnimatedSpriteFemale1.set_flip_h(false)
+	if skin == 2:
+		
+		$AnimatedSpriteAdventurer1.visible = true
+	
+		if _velocity.y < 0:
+			$AnimatedSpriteAdventurer1.play("jump")
+		elif _velocity.y > 0 and Input.is_action_pressed("P1-JUMP"):
+			$AnimatedSpriteAdventurer1.play("jump")
+		elif _velocity.y > 0:
+			$AnimatedSpriteAdventurer1.play("fall")
+		elif Input.is_action_pressed("P1-LEFT") and Input.is_action_pressed("P1-RIGHT"):
+			$AnimatedSpriteAdventurer1.play("stand")
+		elif Input.is_action_pressed("P1-LEFT"):
+			$AnimatedSpriteAdventurer1.play("walk")
+		elif Input.is_action_pressed("P1-RIGHT"):
+			$AnimatedSpriteAdventurer1.play("walk")
+		else:
+			$AnimatedSpriteAdventurer1.play("stand")
+	
+		# flip sprite depending on where the player faces/goes to
+		if Input.is_action_pressed("P1-LEFT") and Input.is_action_pressed("P1-RIGHT"):
+			pass   # skip if block if both left and right buttons are pressed
+		elif Input.is_action_pressed("P1-LEFT"):
+			$AnimatedSpriteAdventurer1.set_flip_h(true)
+		elif Input.is_action_pressed("P1-RIGHT"):
+			$AnimatedSpriteAdventurer1.set_flip_h(false)
 
 
 

@@ -54,8 +54,8 @@ func _physics_process(delta):
 
 func _process(delta: float):
 	
-	_coins_collected = $AllCoins.coins_collected #getting var out of AllCoins and writting it into LevelControls
-	$HUD/Coins.text = "Coins: " + String(_coins_collected) #Writing Coins into HUD
+	_coins_collected = $AllCoins.coins_collected # getting var out of AllCoins and writting it into LevelControls
+	$HUD/Coins.text = "Coins: " + String(_coins_collected) # Writing Coins into HUD
 	
 	level_timer += delta #incresing timer by delta
 	var timer_length := String(int(level_timer)).length() + 3            # calculats whole number length of level_timer +3
@@ -82,5 +82,5 @@ func kill(reason: String):
 """ RESET_ENEMIES: resets the state of all enemies """
 
 func reset_enemies():
-	for i in $Enemies.get_children():   # go through all children of the Enemies node
+	for i in $Enemies.get_children():   # go 	@desc summary of all coins in one Level to count them if collectedthrough all children of the Enemies node
 		i.reset()   # call reset method of enemies

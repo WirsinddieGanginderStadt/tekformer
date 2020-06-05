@@ -23,15 +23,17 @@ var config = ConfigFile.new()
 """ _READY: called on object instantiation. """
 
 func _ready():
+	
+	#getting skn info out of config and setting the Player Skin 
 	config.load("config.cfg")
 	_skin = config.get_value("player", "skin", 0)
-	print(config.has_section("player"))
 	config.save("config.cfg")
-	
 	$Player1.skin = _skin
+	print("[current_Skin]: ", String(_skin))
 	
 	print("[level]: ", name)             # log level to console
 	$HUD/Level.text = "Level: " + name   # show current level in hud
+	
 	level_timer = 0.0 # reseting timer
 
 
@@ -40,6 +42,7 @@ func _ready():
 #    @param delta [float]: time between two frames, filled in by the engine
 
 func _physics_process(delta):
+	
 	if $Player1.position.y > 1500:
 		kill("void")   # kill player when in the void
 
@@ -49,8 +52,10 @@ func _physics_process(delta):
 #    @param delta [float]: time between two frames, filled in by the engine
 
 func _process(delta: float):
-	_coins_collected = $AllCoins.coins_collected 
-	$HUD/Coins.text = "Coins: " + String(_coins_collected)
+	
+	_coins_collected = $AllCoins.coins_collected #getting var out of AllCoins and writting it into LevelControls
+	$HUD/Coins.text = "Coins: " + String(_coins_collected) #Writing Coins into HUD
+	
 	level_timer += delta #incresing timer by delta
 	var timer_length := String(int(level_timer)).length() + 3            # calculats whole number length of level_timer +3
 	$HUD/Timer.text = "Timer: " + String(level_timer).left(timer_length) # updates Timer in Hub only showing 2 decimals

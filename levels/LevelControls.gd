@@ -24,12 +24,13 @@ var config = ConfigFile.new()
 
 func _ready():
 	
-	#getting skn info out of config and setting the Player Skin 
+	#getting skin info out of config and setting the Player Skin 
 	config.load("config.cfg")
 	_skin = config.get_value("player", "skin", 0)
 	config.save("config.cfg")
 	$Player1.skin = _skin
 	print("[current_Skin]: ", String(_skin))
+
 	
 	print("[level]: ", name)             # log level to console
 	$HUD/Level.text = "Level: " + name   # show current level in hud
@@ -71,6 +72,10 @@ func kill(reason: String):
 	$HUD/Deaths.text = "Deaths: " + String(deaths)                # update death hud on screen
 	reset_enemies()                                               # reset enemies
 	level_timer = 0.0                                             # reseting timer
+	_coins_collected = 0                                          # reseting coins
+	$AllCoins.coins_collected = 0
+	$AllCoins.reseting_all_Coins()
+	
 
 
 

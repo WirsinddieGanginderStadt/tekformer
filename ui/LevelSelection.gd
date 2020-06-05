@@ -11,7 +11,7 @@ var data
 
 func _ready() -> void:
 	load_game()
-	button_disabled()
+	button_disable()
 
 func load_game():
 	var file = File.new()
@@ -20,11 +20,12 @@ func load_game():
 	data = parse_json(text)
 	file.close()
 
-func button_disabled():
-	if data["world1"]["1-2"] == true:
-		get_tree().current_scene.get_node("Overlay2").visible = true
-	if data["world1"]["1-2"] == false:
-		get_tree().current_scene.get_node("Overlay2").visible = false
+func button_disable():
+	for i in ["1-2","1-3","1-4","1-5","1-6","1-7","1-8","1-9","1-10","1-11","1-12"]:
+		if data["world1"][i] == true:
+			get_tree().current_scene.get_node("Overlay1-2").visible = true
+		if data["world1"][i] == false:
+			get_tree().current_scene.get_node("Overlay1-2").visible = false
 
 """ _ON_TEXTUREBUTTON_BUTTON_DOWN: detects a click on the button """
 

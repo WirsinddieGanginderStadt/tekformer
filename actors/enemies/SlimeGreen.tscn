@@ -7,9 +7,9 @@
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
-"frames": [ ExtResource( 4 ) ],
+"frames": [ ExtResource( 2 ), ExtResource( 3 ) ],
 "loop": true,
-"name": "dead",
+"name": "walk",
 "speed": 5.0
 }, {
 "frames": [ ExtResource( 2 ) ],
@@ -17,9 +17,9 @@ animations = [ {
 "name": "stand",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 2 ), ExtResource( 3 ) ],
+"frames": [ ExtResource( 4 ) ],
 "loop": true,
-"name": "walk",
+"name": "dead",
 "speed": 5.0
 } ]
 
@@ -43,6 +43,7 @@ playing = true
 [node name="Area2D_Side" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D_Side"]
+visible = false
 position = Vector2( 0, 0.96202 )
 shape = SubResource( 2 )
 

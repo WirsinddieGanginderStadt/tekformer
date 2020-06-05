@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://levels/LevelControls.gd" type="Script" id=1]
 [ext_resource path="res://levels/ParallaxBackground1.tscn" type="PackedScene" id=2]
@@ -7,7 +7,9 @@
 [ext_resource path="res://ui/Fade/FadeOut.tscn" type="PackedScene" id=5]
 [ext_resource path="res://ui/HUD.tscn" type="PackedScene" id=6]
 [ext_resource path="res://ui/Fade/FadeIn.tscn" type="PackedScene" id=7]
+[ext_resource path="res://actors/enemies/cactus.tscn" type="PackedScene" id=8]
 [ext_resource path="res://ui/PauseScreen.tscn" type="PackedScene" id=9]
+[ext_resource path="res://actors/enemies/fly.tscn" type="PackedScene" id=10]
 
 [node name="1-12" type="Node2D"]
 script = ExtResource( 1 )
@@ -23,7 +25,7 @@ position = Vector2( -10.2977, -1.75818 )
 tile_set = ExtResource( 3 )
 cell_size = Vector2( 70, 70 )
 format = 1
-tile_data = PoolIntArray( 262176, 16, 0, 327681, 13, 0, 393217, 0, 0 )
+tile_data = PoolIntArray( 262176, 16, 0, 327681, 13, 0, 393217, 0, 0, 393220, 0, 0, 393223, 2, 0, 393224, 2, 0, 393225, 2, 0, 393226, 2, 0, 393227, 2, 0, 393228, 2, 0 )
 
 [node name="Player1" parent="." instance=ExtResource( 4 )]
 position = Vector2( 98, -56 )
@@ -31,7 +33,12 @@ position = Vector2( 98, -56 )
 [node name="HUD" parent="." instance=ExtResource( 6 )]
 
 [node name="Enemies" type="Node2D" parent="."]
-visible = false
+
+[node name="cactus" parent="Enemies" instance=ExtResource( 8 )]
+position = Vector2( 321.814, 379.439 )
+
+[node name="fly" parent="Enemies" instance=ExtResource( 10 )]
+position = Vector2( 615.947, 375.025 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 

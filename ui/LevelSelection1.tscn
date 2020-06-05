@@ -236,6 +236,7 @@ align = 1
 valign = 1
 
 [node name="Overlay1-2" type="TextureButton" parent="."]
+visible = false
 margin_left = 355.732
 margin_top = 425.07
 margin_right = 425.732

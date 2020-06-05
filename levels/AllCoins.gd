@@ -22,8 +22,6 @@ func _process(delta):
 
 #WIP
 func reseting_all_Coins():
-	
 	for i in child_count: #goes throw every child Note equal to all level Coins
 		#get_child(i).reseting_Coin()
-
-
+		pass

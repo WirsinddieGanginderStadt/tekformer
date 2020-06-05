@@ -1,20 +1,6 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=2 format=2]
 
-[ext_resource path="res://Objects/Coin.tscn" type="PackedScene" id=1]
 [ext_resource path="res://levels/AllCoins.gd" type="Script" id=2]
-[ext_resource path="res://Objects/Coin.gd" type="Script" id=3]
 
 [node name="AllCoins" type="Node"]
 script = ExtResource( 2 )
-
-[node name="Coin" type="Area2D" parent="." instance=ExtResource( 1 )]
-position = Vector2( 849.532, 229.122 )
-collision_layer = 31
-script = ExtResource( 3 )
-
-[node name="Coin2" type="Area2D" parent="." instance=ExtResource( 1 )]
-position = Vector2( 705.949, 224.949 )
-collision_layer = 31
-script = ExtResource( 3 )
-[connection signal="body_entered" from="Coin" to="Coin" method="_on_body_entered"]
-[connection signal="body_entered" from="Coin2" to="Coin2" method="_on_body_entered"]

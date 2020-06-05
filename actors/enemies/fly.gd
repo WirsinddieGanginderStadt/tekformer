@@ -58,7 +58,15 @@ func animate_sprite() -> void:
 		elif speed.x < 0:
 			$AnimatedSprite.flip_h = false
 
+""" RESET: resets the slime. called by LevelControls """
 
+func reset():
+	yield(get_tree().create_timer(0.05), "timeout")   # small delay before resetting the slime (bugfix). don't put too much slimes into one level, otherwise, some unexpected long delays might happen.
+	# reset variables:
+	position = defaultPos
+	speed = defaultSpeed
+	animate_sprite()
+	
 
 
 

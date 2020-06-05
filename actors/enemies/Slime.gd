@@ -105,3 +105,10 @@ func dead():
 	dead = true
 	animate_sprite()
 	update_collisions()
+
+
+
+func _on_Timer_timeout() -> void:
+	queue_free()
+
+

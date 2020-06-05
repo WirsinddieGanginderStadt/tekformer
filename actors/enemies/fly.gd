@@ -13,7 +13,7 @@ var defaultPos   := Vector2(    0.0, 0.0)   # default position, gets set in _rea
 var defaultSpeed := Vector2(-2500.0, 0.0)   # default speed
 
 var speed := defaultSpeed   # current speed
-var dead  := false   # is the fly dead? used for sprite animations & collision behaviour
+
 
 
 
@@ -29,7 +29,6 @@ func _ready():
 #   @param delta [float]: time elapsed between two frames. filled in by the engine.
 
 func _physics_process(delta: float) -> void:
-	if not dead:
 		move_and_slide(speed * delta)                         # move fly
 		if position.x < defaultPos.x - 200 and speed.x < 0:   # fly is allowed to move 200 into -x direction
 			speed.x = -speed.x                                # flip movement direction
@@ -44,23 +43,14 @@ func _physics_process(delta: float) -> void:
 #   @param area: area of the collision object. unused.
 
 func _on_Area2D_body_entered(body) -> void:
-	if not dead:
 		if body.name == "Player1":
 			get_tree().get_current_scene().kill("kill: fly")   # kill the player
 
 
-""" _ON_AREA2D_TOP_AREA_ENTERED: detects top collisions with other area2d's """
-#   @param area: area of the collision object. unused.
-
-func _on_Area2D_Top_area_entered(area):
-	dead = true
-	animate_sprite()
-	
 
 """ ANIMATE_SPRITE: animates the fly sprite. """
 
 func animate_sprite() -> void:
-	if not dead:
 		$AnimatedSprite.play("fly1")
 		# flip facing depending on movement direction:
 		if speed.x > 0:
@@ -74,27 +64,11 @@ func animate_sprite() -> void:
 
 
 
-""" RESET: resets the fly. called by LevelControls """
-
-func reset():
-	yield(get_tree().create_timer(0.05), "timeout")   # small delay before resetting the slime (bugfix). don't put too much slimes into one level, otherwise, some unexpected long delays might happen.
-	# reset variables:
-	position = defaultPos
-	speed = defaultSpeed
-	dead = false
-	animate_sprite()
 
 
 
-func dead():
-	dead = true
-	animate_sprite()
-	
 
 
-
-func _on_Timer_timeout() -> void:
-	queue_free()
 
 
 

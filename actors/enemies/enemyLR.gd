@@ -1,7 +1,7 @@
 """
 	ENEMYLR.GD
 	@desc base class for all enemies that move left/right.
-	@auth tk
+	@auth tk, lm
 """
 
 extends KinematicBody2D

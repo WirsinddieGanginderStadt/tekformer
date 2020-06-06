@@ -8,20 +8,9 @@
 
 config_version=4
 
-_global_script_classes=[ {
-"base": "KinematicBody2D",
-"class": "EnemyLR",
-"language": "GDScript",
-"path": "res://actors/enemies/enemyLR.gd"
-}, {
-"base": "StaticBody2D",
-"class": "EnemyStatic",
-"language": "GDScript",
-"path": "res://actors/enemies/enemyStatic.gd"
-} ]
+_global_script_classes=[  ]
 _global_script_class_icons={
-"EnemyLR": "",
-"EnemyStatic": ""
+
 }
 
 [application]

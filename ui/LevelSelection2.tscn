@@ -1,11 +1,11 @@
 [gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://ui/Fade/FadeOut.tscn" type="PackedScene" id=1]
-[ext_resource path="res://assets/ui/level button 2.png" type="Texture" id=2]
-[ext_resource path="res://assets/ui/level button 2 hover.png" type="Texture" id=3]
+[ext_resource path="res://assets/ui/level button 1.png" type="Texture" id=2]
+[ext_resource path="res://assets/ui/level button 1 hover.png" type="Texture" id=3]
 [ext_resource path="res://ui/LevelSelectionButtons.gd" type="Script" id=4]
 [ext_resource path="res://assets/fonts/SF-Pro-Text-Regular.otf" type="DynamicFontData" id=5]
-[ext_resource path="res://levels/ParallaxBackground2.tscn" type="PackedScene" id=6]
+[ext_resource path="res://levels/ParallaxBackground1.tscn" type="PackedScene" id=6]
 [ext_resource path="res://assets/textures/items/keys/keyYellow.png" type="Texture" id=7]
 [ext_resource path="res://ui/LevelSelection.gd" type="Script" id=9]
 
@@ -17,14 +17,15 @@ font_data = ExtResource( 5 )
 script = ExtResource( 9 )
 world = 2
 
-[node name="ParallaxBackground2" parent="." instance=ExtResource( 6 )]
+[node name="ParallaxBackground" parent="." instance=ExtResource( 6 )]
 
 [node name="FadeOut" parent="." instance=ExtResource( 1 )]
+position = Vector2( 1.22774, 0 )
 
 [node name="Buttons" type="Node2D" parent="."]
 position = Vector2( 248, 362 )
 
-[node name="1-1" type="TextureButton" parent="Buttons"]
+[node name="2-1" type="TextureButton" parent="Buttons"]
 margin_left = 32.0
 margin_top = 64.0
 margin_right = 96.0
@@ -36,7 +37,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Label" type="Label" parent="Buttons/1-1"]
+[node name="Label" type="Label" parent="Buttons/2-1"]
 margin_right = 64.0
 margin_bottom = 64.0
 custom_fonts/font = SubResource( 1 )
@@ -47,7 +48,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="1-2" type="TextureButton" parent="Buttons"]
+[node name="2-2" type="TextureButton" parent="Buttons"]
 margin_left = 112.0
 margin_top = 64.0
 margin_right = 176.0
@@ -56,7 +57,7 @@ texture_normal = ExtResource( 2 )
 texture_hover = ExtResource( 3 )
 script = ExtResource( 4 )
 
-[node name="Label" type="Label" parent="Buttons/1-2"]
+[node name="Label" type="Label" parent="Buttons/2-2"]
 margin_right = 64.0
 margin_bottom = 64.0
 custom_fonts/font = SubResource( 1 )
@@ -64,7 +65,7 @@ text = "2-2"
 align = 1
 valign = 1
 
-[node name="1-3" type="TextureButton" parent="Buttons"]
+[node name="2-3" type="TextureButton" parent="Buttons"]
 margin_left = 192.0
 margin_top = 64.0
 margin_right = 256.0
@@ -73,7 +74,7 @@ texture_normal = ExtResource( 2 )
 texture_hover = ExtResource( 3 )
 script = ExtResource( 4 )
 
-[node name="Label" type="Label" parent="Buttons/1-3"]
+[node name="Label" type="Label" parent="Buttons/2-3"]
 margin_right = 64.0
 margin_bottom = 64.0
 custom_fonts/font = SubResource( 1 )
@@ -81,7 +82,7 @@ text = "2-3"
 align = 1
 valign = 1
 
-[node name="1-4" type="TextureButton" parent="Buttons"]
+[node name="2-4" type="TextureButton" parent="Buttons"]
 margin_left = 272.0
 margin_top = 64.0
 margin_right = 336.0
@@ -93,7 +94,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Label" type="Label" parent="Buttons/1-4"]
+[node name="Label" type="Label" parent="Buttons/2-4"]
 margin_right = 64.0
 margin_bottom = 64.0
 custom_fonts/font = SubResource( 1 )
@@ -101,7 +102,7 @@ text = "2-4"
 align = 1
 valign = 1
 
-[node name="1-5" type="TextureButton" parent="Buttons"]
+[node name="2-5" type="TextureButton" parent="Buttons"]
 margin_left = 352.0
 margin_top = 64.0
 margin_right = 416.0
@@ -110,7 +111,7 @@ texture_normal = ExtResource( 2 )
 texture_hover = ExtResource( 3 )
 script = ExtResource( 4 )
 
-[node name="Label" type="Label" parent="Buttons/1-5"]
+[node name="Label" type="Label" parent="Buttons/2-5"]
 margin_right = 64.0
 margin_bottom = 64.0
 custom_fonts/font = SubResource( 1 )
@@ -118,7 +119,7 @@ text = "2-5"
 align = 1
 valign = 1
 
-[node name="1-6" type="TextureButton" parent="Buttons"]
+[node name="2-6" type="TextureButton" parent="Buttons"]
 margin_left = 432.0
 margin_top = 64.0
 margin_right = 496.0
@@ -127,7 +128,7 @@ texture_normal = ExtResource( 2 )
 texture_hover = ExtResource( 3 )
 script = ExtResource( 4 )
 
-[node name="Label" type="Label" parent="Buttons/1-6"]
+[node name="Label" type="Label" parent="Buttons/2-6"]
 margin_right = 64.0
 margin_bottom = 64.0
 custom_fonts/font = SubResource( 1 )
@@ -135,7 +136,7 @@ text = "2-6"
 align = 1
 valign = 1
 
-[node name="1-7" type="TextureButton" parent="Buttons"]
+[node name="2-7" type="TextureButton" parent="Buttons"]
 margin_left = 32.0
 margin_top = 144.0
 margin_right = 96.0
@@ -144,7 +145,7 @@ texture_normal = ExtResource( 2 )
 texture_hover = ExtResource( 3 )
 script = ExtResource( 4 )
 
-[node name="Label" type="Label" parent="Buttons/1-7"]
+[node name="Label" type="Label" parent="Buttons/2-7"]
 margin_right = 64.0
 margin_bottom = 64.0
 custom_fonts/font = SubResource( 1 )
@@ -152,7 +153,7 @@ text = "2-7"
 align = 1
 valign = 1
 
-[node name="1-8" type="TextureButton" parent="Buttons"]
+[node name="2-8" type="TextureButton" parent="Buttons"]
 margin_left = 112.0
 margin_top = 144.0
 margin_right = 176.0
@@ -161,7 +162,7 @@ texture_normal = ExtResource( 2 )
 texture_hover = ExtResource( 3 )
 script = ExtResource( 4 )
 
-[node name="Label" type="Label" parent="Buttons/1-8"]
+[node name="Label" type="Label" parent="Buttons/2-8"]
 margin_right = 64.0
 margin_bottom = 64.0
 custom_fonts/font = SubResource( 1 )
@@ -169,7 +170,7 @@ text = "2-8"
 align = 1
 valign = 1
 
-[node name="1-9" type="TextureButton" parent="Buttons"]
+[node name="2-9" type="TextureButton" parent="Buttons"]
 margin_left = 192.0
 margin_top = 144.0
 margin_right = 256.0
@@ -178,7 +179,7 @@ texture_normal = ExtResource( 2 )
 texture_hover = ExtResource( 3 )
 script = ExtResource( 4 )
 
-[node name="Label" type="Label" parent="Buttons/1-9"]
+[node name="Label" type="Label" parent="Buttons/2-9"]
 margin_right = 64.0
 margin_bottom = 64.0
 custom_fonts/font = SubResource( 1 )
@@ -186,7 +187,7 @@ text = "2-9"
 align = 1
 valign = 1
 
-[node name="1-10" type="TextureButton" parent="Buttons"]
+[node name="2-10" type="TextureButton" parent="Buttons"]
 margin_left = 272.0
 margin_top = 144.0
 margin_right = 336.0
@@ -195,7 +196,7 @@ texture_normal = ExtResource( 2 )
 texture_hover = ExtResource( 3 )
 script = ExtResource( 4 )
 
-[node name="Label" type="Label" parent="Buttons/1-10"]
+[node name="Label" type="Label" parent="Buttons/2-10"]
 margin_right = 64.0
 margin_bottom = 64.0
 custom_fonts/font = SubResource( 1 )
@@ -203,7 +204,7 @@ text = "2-10"
 align = 1
 valign = 1
 
-[node name="1-11" type="TextureButton" parent="Buttons"]
+[node name="2-11" type="TextureButton" parent="Buttons"]
 margin_left = 352.0
 margin_top = 144.0
 margin_right = 416.0
@@ -215,7 +216,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Label" type="Label" parent="Buttons/1-11"]
+[node name="Label" type="Label" parent="Buttons/2-11"]
 margin_right = 64.0
 margin_bottom = 64.0
 custom_fonts/font = SubResource( 1 )
@@ -223,7 +224,7 @@ text = "2-11"
 align = 1
 valign = 1
 
-[node name="1-12" type="TextureButton" parent="Buttons"]
+[node name="2-12" type="TextureButton" parent="Buttons"]
 margin_left = 432.0
 margin_top = 144.0
 margin_right = 496.0
@@ -232,7 +233,7 @@ texture_normal = ExtResource( 2 )
 texture_hover = ExtResource( 3 )
 script = ExtResource( 4 )
 
-[node name="Label" type="Label" parent="Buttons/1-12"]
+[node name="Label" type="Label" parent="Buttons/2-12"]
 margin_right = 64.0
 margin_bottom = 64.0
 custom_fonts/font = SubResource( 1 )
@@ -240,9 +241,9 @@ text = "2-12"
 align = 1
 valign = 1
 
-[node name="Node2D" type="Node2D" parent="."]
+[node name="Overlay" type="Node2D" parent="."]
 
-[node name="Overlay1-2" type="TextureButton" parent="Node2D"]
+[node name="Overlay1-2" type="TextureButton" parent="Overlay"]
 margin_left = 357.174
 margin_top = 423.598
 margin_right = 427.174
@@ -252,7 +253,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Overlay1-3" type="TextureButton" parent="Node2D"]
+[node name="Overlay1-3" type="TextureButton" parent="Overlay"]
 margin_left = 438.601
 margin_top = 423.598
 margin_right = 508.601
@@ -262,7 +263,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Overlay1-4" type="TextureButton" parent="Node2D"]
+[node name="Overlay1-4" type="TextureButton" parent="Overlay"]
 margin_left = 516.327
 margin_top = 423.598
 margin_right = 586.327
@@ -272,7 +273,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Overlay1-5" type="TextureButton" parent="Node2D"]
+[node name="Overlay1-5" type="TextureButton" parent="Overlay"]
 margin_left = 594.053
 margin_top = 425.448
 margin_right = 664.053
@@ -282,7 +283,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Overlay1-6" type="TextureButton" parent="Node2D"]
+[node name="Overlay1-6" type="TextureButton" parent="Overlay"]
 margin_left = 681.032
 margin_top = 425.448
 margin_right = 751.032
@@ -292,7 +293,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Overlay1-7" type="TextureButton" parent="Node2D"]
+[node name="Overlay1-7" type="TextureButton" parent="Overlay"]
 margin_left = 277.598
 margin_top = 499.473
 margin_right = 347.598
@@ -302,7 +303,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Overlay1-8" type="TextureButton" parent="Node2D"]
+[node name="Overlay1-8" type="TextureButton" parent="Overlay"]
 margin_left = 357.174
 margin_top = 503.174
 margin_right = 427.174
@@ -312,7 +313,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Overlay1-9" type="TextureButton" parent="Node2D"]
+[node name="Overlay1-9" type="TextureButton" parent="Overlay"]
 margin_left = 434.9
 margin_top = 501.323
 margin_right = 504.9
@@ -322,7 +323,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Overlay1-10" type="TextureButton" parent="Node2D"]
+[node name="Overlay1-10" type="TextureButton" parent="Overlay"]
 margin_left = 518.177
 margin_top = 505.025
 margin_right = 588.177
@@ -332,7 +333,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Overlay1-11" type="TextureButton" parent="Node2D"]
+[node name="Overlay1-11" type="TextureButton" parent="Overlay"]
 margin_left = 597.754
 margin_top = 503.174
 margin_right = 667.754
@@ -342,7 +343,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Overlay1-12" type="TextureButton" parent="Node2D"]
+[node name="Overlay1-12" type="TextureButton" parent="Overlay"]
 margin_left = 675.48
 margin_top = 501.323
 margin_right = 745.48
@@ -351,15 +352,15 @@ texture_normal = ExtResource( 7 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
-[connection signal="button_down" from="Buttons/1-1" to="Buttons/1-1" method="_on_TextureButton_button_down"]
-[connection signal="button_down" from="Buttons/1-2" to="Buttons/1-2" method="_on_TextureButton_button_down"]
-[connection signal="button_down" from="Buttons/1-3" to="Buttons/1-3" method="_on_TextureButton_button_down"]
-[connection signal="button_down" from="Buttons/1-4" to="Buttons/1-4" method="_on_TextureButton_button_down"]
-[connection signal="button_down" from="Buttons/1-5" to="Buttons/1-5" method="_on_TextureButton_button_down"]
-[connection signal="button_down" from="Buttons/1-6" to="Buttons/1-6" method="_on_TextureButton_button_down"]
-[connection signal="button_down" from="Buttons/1-7" to="Buttons/1-7" method="_on_TextureButton_button_down"]
-[connection signal="button_down" from="Buttons/1-8" to="Buttons/1-8" method="_on_TextureButton_button_down"]
-[connection signal="button_down" from="Buttons/1-9" to="Buttons/1-9" method="_on_TextureButton_button_down"]
-[connection signal="button_down" from="Buttons/1-10" to="Buttons/1-10" method="_on_TextureButton_button_down"]
-[connection signal="button_down" from="Buttons/1-11" to="Buttons/1-11" method="_on_TextureButton_button_down"]
-[connection signal="button_down" from="Buttons/1-12" to="Buttons/1-12" method="_on_TextureButton_button_down"]
+[connection signal="button_down" from="Buttons/2-1" to="Buttons/2-1" method="_on_TextureButton_button_down"]
+[connection signal="button_down" from="Buttons/2-2" to="Buttons/2-2" method="_on_TextureButton_button_down"]
+[connection signal="button_down" from="Buttons/2-3" to="Buttons/2-3" method="_on_TextureButton_button_down"]
+[connection signal="button_down" from="Buttons/2-4" to="Buttons/2-4" method="_on_TextureButton_button_down"]
+[connection signal="button_down" from="Buttons/2-5" to="Buttons/2-5" method="_on_TextureButton_button_down"]
+[connection signal="button_down" from="Buttons/2-6" to="Buttons/2-6" method="_on_TextureButton_button_down"]
+[connection signal="button_down" from="Buttons/2-7" to="Buttons/2-7" method="_on_TextureButton_button_down"]
+[connection signal="button_down" from="Buttons/2-8" to="Buttons/2-8" method="_on_TextureButton_button_down"]
+[connection signal="button_down" from="Buttons/2-9" to="Buttons/2-9" method="_on_TextureButton_button_down"]
+[connection signal="button_down" from="Buttons/2-10" to="Buttons/2-10" method="_on_TextureButton_button_down"]
+[connection signal="button_down" from="Buttons/2-11" to="Buttons/2-11" method="_on_TextureButton_button_down"]
+[connection signal="button_down" from="Buttons/2-12" to="Buttons/2-12" method="_on_TextureButton_button_down"]

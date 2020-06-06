@@ -40,7 +40,7 @@ visible = false
 [node name="PauseScreen" parent="CanvasLayer" instance=ExtResource( 9 )]
 visible = false
 
-[node name="NextLevelTeleporter" parent="." instance=ExtResource( 8 )]
+[node name="WorldSelection" parent="." instance=ExtResource( 8 )]
 position = Vector2( 6683.59, 351.714 )
 
 [node name="AllCoins" parent="." instance=ExtResource( 10 )]

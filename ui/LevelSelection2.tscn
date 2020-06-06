@@ -231,9 +231,9 @@ align = 1
 valign = 1
 <<<<<<< HEAD
 
-[node name="Overlay" type="Node2D" parent="."]
+[node name="Node2D" type="Node2D" parent="."]
 
-[node name="Overlay1-2" type="TextureButton" parent="Overlay"]
+[node name="Overlay1-2" type="TextureButton" parent="Node2D"]
 margin_left = 357.174
 margin_top = 423.598
 margin_right = 427.174
@@ -243,7 +243,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Overlay1-3" type="TextureButton" parent="Overlay"]
+[node name="Overlay1-3" type="TextureButton" parent="Node2D"]
 margin_left = 438.601
 margin_top = 423.598
 margin_right = 508.601
@@ -253,7 +253,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Overlay1-4" type="TextureButton" parent="Overlay"]
+[node name="Overlay1-4" type="TextureButton" parent="Node2D"]
 margin_left = 516.327
 margin_top = 423.598
 margin_right = 586.327
@@ -263,7 +263,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Overlay1-5" type="TextureButton" parent="Overlay"]
+[node name="Overlay1-5" type="TextureButton" parent="Node2D"]
 margin_left = 594.053
 margin_top = 425.448
 margin_right = 664.053
@@ -273,7 +273,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Overlay1-6" type="TextureButton" parent="Overlay"]
+[node name="Overlay1-6" type="TextureButton" parent="Node2D"]
 margin_left = 681.032
 margin_top = 425.448
 margin_right = 751.032
@@ -283,7 +283,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Overlay1-7" type="TextureButton" parent="Overlay"]
+[node name="Overlay1-7" type="TextureButton" parent="Node2D"]
 margin_left = 277.598
 margin_top = 499.473
 margin_right = 347.598
@@ -293,7 +293,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Overlay1-8" type="TextureButton" parent="Overlay"]
+[node name="Overlay1-8" type="TextureButton" parent="Node2D"]
 margin_left = 357.174
 margin_top = 503.174
 margin_right = 427.174
@@ -303,7 +303,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Overlay1-9" type="TextureButton" parent="Overlay"]
+[node name="Overlay1-9" type="TextureButton" parent="Node2D"]
 margin_left = 434.9
 margin_top = 501.323
 margin_right = 504.9
@@ -313,7 +313,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Overlay1-10" type="TextureButton" parent="Overlay"]
+[node name="Overlay1-10" type="TextureButton" parent="Node2D"]
 margin_left = 518.177
 margin_top = 505.025
 margin_right = 588.177
@@ -323,7 +323,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Overlay1-11" type="TextureButton" parent="Overlay"]
+[node name="Overlay1-11" type="TextureButton" parent="Node2D"]
 margin_left = 597.754
 margin_top = 503.174
 margin_right = 667.754
@@ -333,7 +333,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Overlay1-12" type="TextureButton" parent="Overlay"]
+[node name="Overlay1-12" type="TextureButton" parent="Node2D"]
 margin_left = 675.48
 margin_top = 501.323
 margin_right = 745.48

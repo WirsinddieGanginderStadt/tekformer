@@ -6,34 +6,6 @@
 
 extends TextureButton
 
-#var path = "res://data/levellock.json"
-#v#ar data 
-
-#func _ready() -> void:
-#	load_game()
-#	button_disable()
-#	button_disable2()
-
-#f#unc load_game():
-#	var file = File.new()
-#	file.open(path, file.READ)
-#	var text = file.get_as_text()
-#	data = parse_json(text)
-#	file.close()
-
-#f#unc button_disable():
-#	for i in ["1-2","1-3","1-4","1-5","1-6","1-7","1-8","1-9","1-10","1-11","1-12"]:
-#		if data["world1"][i] == true:
-#			get_tree().current_scene.get_node("Overlay"+i).visible = true
-##		if data["world1"][i] == false:
-#			get_tree().current_scene.get_node("Overlay"+i).visible = false
-
-#func button_disable2():
-#	for i in ["2-2","2-3","2-4","2-5","2-6","2-7","2-8","2-9","2-10","2-11","2-12"]:
-#		if data["world2"][i] == true:
-#			get_tree().current_scene.get_node("Overlay"+i).visible = true
-#		if data["world2"][i] == false:
-#			get_tree().current_scene.get_node("Overlay"+i).visible = false
 
 """ _ON_TEXTUREBUTTON_BUTTON_DOWN: detects a click on the button """
 

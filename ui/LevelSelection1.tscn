@@ -7,13 +7,14 @@
 [ext_resource path="res://assets/fonts/SF-Pro-Text-Regular.otf" type="DynamicFontData" id=5]
 [ext_resource path="res://levels/ParallaxBackground1.tscn" type="PackedScene" id=6]
 [ext_resource path="res://assets/textures/items/keys/keyYellow.png" type="Texture" id=7]
-[ext_resource path="res://ui/Overlay.gd" type="Script" id=8]
+[ext_resource path="res://ui/LevelSelection1.gd" type="Script" id=9]
 
 [sub_resource type="DynamicFont" id=1]
 size = 24
 font_data = ExtResource( 5 )
 
 [node name="Node2D" type="Node2D"]
+script = ExtResource( 9 )
 
 [node name="ParallaxBackground" parent="." instance=ExtResource( 6 )]
 
@@ -236,134 +237,112 @@ text = "1-12"
 align = 1
 valign = 1
 
-[node name="Overlay1-3" type="TextureButton" parent="."]
-visible = false
-margin_left = 437.129
-margin_top = 425.07
-margin_right = 507.129
-margin_bottom = 495.07
-texture_normal = ExtResource( 7 )
-script = ExtResource( 8 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
-
 [node name="Overlay1-2" type="TextureButton" parent="."]
-visible = false
 margin_left = 355.732
 margin_top = 425.07
 margin_right = 425.732
 margin_bottom = 495.07
 texture_normal = ExtResource( 7 )
-script = ExtResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Overlay1-3" type="TextureButton" parent="."]
+margin_left = 437.129
+margin_top = 425.07
+margin_right = 507.129
+margin_bottom = 495.07
+texture_normal = ExtResource( 7 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Overlay1-4" type="TextureButton" parent="."]
-visible = false
 margin_left = 518.525
 margin_top = 426.577
 margin_right = 588.525
 margin_bottom = 496.577
 texture_normal = ExtResource( 7 )
-script = ExtResource( 8 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Overlay1-5" type="TextureButton" parent="."]
-visible = false
 margin_left = 595.4
 margin_top = 425.07
 margin_right = 665.4
 margin_bottom = 495.07
 texture_normal = ExtResource( 7 )
-script = ExtResource( 8 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Overlay1-6" type="TextureButton" parent="."]
-visible = false
 margin_left = 676.796
 margin_top = 423.563
 margin_right = 746.796
 margin_bottom = 493.563
 texture_normal = ExtResource( 7 )
-script = ExtResource( 8 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Overlay1-7" type="TextureButton" parent="."]
-visible = false
 margin_left = 277.351
 margin_top = 504.959
 margin_right = 347.351
 margin_bottom = 574.959
 texture_normal = ExtResource( 7 )
-script = ExtResource( 8 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Overlay1-8" type="TextureButton" parent="."]
-visible = false
 margin_left = 357.24
 margin_top = 503.452
 margin_right = 427.24
 margin_bottom = 573.452
 texture_normal = ExtResource( 7 )
-script = ExtResource( 8 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Overlay1-9" type="TextureButton" parent="."]
-visible = false
 margin_left = 437.129
 margin_top = 504.959
 margin_right = 507.129
 margin_bottom = 574.959
 texture_normal = ExtResource( 7 )
-script = ExtResource( 8 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Overlay1-10" type="TextureButton" parent="."]
-visible = false
 margin_left = 512.496
 margin_top = 503.452
 margin_right = 582.496
 margin_bottom = 573.452
 texture_normal = ExtResource( 7 )
-script = ExtResource( 8 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Overlay1-11" type="TextureButton" parent="."]
-visible = false
 margin_left = 593.892
 margin_top = 504.959
 margin_right = 663.892
 margin_bottom = 574.959
 texture_normal = ExtResource( 7 )
-script = ExtResource( 8 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Overlay1-12" type="TextureButton" parent="."]
-visible = false
 margin_left = 673.781
 margin_top = 504.959
 margin_right = 743.781
 margin_bottom = 574.959
 texture_normal = ExtResource( 7 )
-script = ExtResource( 8 )
 __meta__ = {
 "_edit_use_anchors_": false
 }

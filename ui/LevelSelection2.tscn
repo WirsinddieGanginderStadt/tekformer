@@ -3,11 +3,11 @@
 [ext_resource path="res://ui/Fade/FadeOut.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/ui/level button 1.png" type="Texture" id=2]
 [ext_resource path="res://assets/ui/level button 1 hover.png" type="Texture" id=3]
-[ext_resource path="res://ui/LevelSelection.gd" type="Script" id=4]
+[ext_resource path="res://ui/LevelSelectionButtons.gd" type="Script" id=4]
 [ext_resource path="res://assets/fonts/SF-Pro-Text-Regular.otf" type="DynamicFontData" id=5]
 [ext_resource path="res://levels/ParallaxBackground1.tscn" type="PackedScene" id=6]
 [ext_resource path="res://assets/textures/items/keys/keyYellow.png" type="Texture" id=7]
-[ext_resource path="res://ui/LevelSelection1.gd" type="Script" id=9]
+[ext_resource path="res://ui/LevelSelection.gd" type="Script" id=9]
 
 [sub_resource type="DynamicFont" id=1]
 size = 24
@@ -240,7 +240,9 @@ text = "2-12"
 align = 1
 valign = 1
 
-[node name="Overlay1-2" type="TextureButton" parent="."]
+[node name="Node2D" type="Node2D" parent="."]
+
+[node name="Overlay1-2" type="TextureButton" parent="Node2D"]
 margin_left = 357.174
 margin_top = 423.598
 margin_right = 427.174
@@ -250,7 +252,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Overlay1-3" type="TextureButton" parent="."]
+[node name="Overlay1-3" type="TextureButton" parent="Node2D"]
 margin_left = 438.601
 margin_top = 423.598
 margin_right = 508.601
@@ -260,7 +262,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Overlay1-4" type="TextureButton" parent="."]
+[node name="Overlay1-4" type="TextureButton" parent="Node2D"]
 margin_left = 516.327
 margin_top = 423.598
 margin_right = 586.327
@@ -270,7 +272,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Overlay1-5" type="TextureButton" parent="."]
+[node name="Overlay1-5" type="TextureButton" parent="Node2D"]
 margin_left = 594.053
 margin_top = 425.448
 margin_right = 664.053
@@ -280,7 +282,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Overlay1-6" type="TextureButton" parent="."]
+[node name="Overlay1-6" type="TextureButton" parent="Node2D"]
 margin_left = 681.032
 margin_top = 425.448
 margin_right = 751.032
@@ -290,7 +292,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Overlay1-7" type="TextureButton" parent="."]
+[node name="Overlay1-7" type="TextureButton" parent="Node2D"]
 margin_left = 277.598
 margin_top = 499.473
 margin_right = 347.598
@@ -300,7 +302,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Overlay1-8" type="TextureButton" parent="."]
+[node name="Overlay1-8" type="TextureButton" parent="Node2D"]
 margin_left = 357.174
 margin_top = 503.174
 margin_right = 427.174
@@ -310,7 +312,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Overlay1-9" type="TextureButton" parent="."]
+[node name="Overlay1-9" type="TextureButton" parent="Node2D"]
 margin_left = 434.9
 margin_top = 501.323
 margin_right = 504.9
@@ -320,7 +322,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Overlay1-10" type="TextureButton" parent="."]
+[node name="Overlay1-10" type="TextureButton" parent="Node2D"]
 margin_left = 518.177
 margin_top = 505.025
 margin_right = 588.177
@@ -330,7 +332,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Overlay1-11" type="TextureButton" parent="."]
+[node name="Overlay1-11" type="TextureButton" parent="Node2D"]
 margin_left = 597.754
 margin_top = 503.174
 margin_right = 667.754
@@ -340,7 +342,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="Overlay1-12" type="TextureButton" parent="."]
+[node name="Overlay1-12" type="TextureButton" parent="Node2D"]
 margin_left = 675.48
 margin_top = 501.323
 margin_right = 745.48

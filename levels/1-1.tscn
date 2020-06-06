@@ -47,4 +47,40 @@ visible = false
 [node name="AllCoins" parent="." instance=ExtResource( 11 )]
 
 [node name="Coin" parent="AllCoins" instance=ExtResource( 9 )]
-position = Vector2( 644.519, 235.025 )
+position = Vector2( 696, 192 )
+
+[node name="Coin2" parent="AllCoins" instance=ExtResource( 9 )]
+position = Vector2( 736, 192 )
+
+[node name="Coin3" parent="AllCoins" instance=ExtResource( 9 )]
+position = Vector2( 656, 192 )
+
+[node name="Coin4" parent="AllCoins" instance=ExtResource( 9 )]
+position = Vector2( 776, 192 )
+
+[node name="Coin8" parent="AllCoins" instance=ExtResource( 9 )]
+position = Vector2( 1976, 112 )
+
+[node name="Coin7" parent="AllCoins" instance=ExtResource( 9 )]
+position = Vector2( 2016, 112 )
+
+[node name="Coin6" parent="AllCoins" instance=ExtResource( 9 )]
+position = Vector2( 1936, 112 )
+
+[node name="Coin5" parent="AllCoins" instance=ExtResource( 9 )]
+position = Vector2( 2056, 112 )
+
+[node name="Coin12" parent="AllCoins" instance=ExtResource( 9 )]
+position = Vector2( 4904, 232 )
+
+[node name="Coin11" parent="AllCoins" instance=ExtResource( 9 )]
+position = Vector2( 4944, 232 )
+
+[node name="Coin10" parent="AllCoins" instance=ExtResource( 9 )]
+position = Vector2( 4864, 232 )
+
+[node name="Coin9" parent="AllCoins" instance=ExtResource( 9 )]
+position = Vector2( 4984, 232 )
+
+[node name="Coin13" parent="AllCoins" instance=ExtResource( 9 )]
+position = Vector2( 6400, 248 )

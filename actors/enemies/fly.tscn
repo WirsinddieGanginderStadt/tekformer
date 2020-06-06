@@ -13,10 +13,10 @@ animations = [ {
 } ]
 
 [sub_resource type="RectangleShape2D" id=2]
-extents = Vector2( 38.3522, 18.05 )
+extents = Vector2( 19, 18.05 )
 
 [sub_resource type="RectangleShape2D" id=3]
-extents = Vector2( 36.9671, 17.4036 )
+extents = Vector2( 17.8008, 17.4036 )
 
 [node name="fly" type="KinematicBody2D"]
 script = ExtResource( 1 )

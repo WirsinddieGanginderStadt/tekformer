@@ -13,4 +13,7 @@ extends StaticBody2D
 
 func _on_Area2D_area_entered(area):
 	print("Finished Level " + get_tree().current_scene.name + " within " + get_tree().current_scene.get_node("HUD").get_node("Timer").text.replace("Timer: ", "") + " seconds.")   # log needed time
-	get_tree().current_scene.get_node("FadeOut").fadeout("res://levels/" + name + ".tscn")   # call function of fadeout node
+	if name == "WorldSelection":
+		get_tree().current_scene.get_node("FadeOut").fadeout("res://ui/WorldSelection.tscn")   # call function of fadeout node
+	else:
+		get_tree().current_scene.get_node("FadeOut").fadeout("res://levels/" + name + ".tscn")   # call function of fadeout node

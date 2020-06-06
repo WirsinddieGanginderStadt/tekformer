@@ -10,6 +10,8 @@ Simple platformer school project made with the Godot Engine.
 
 ## Useful links
 
+- [Documentation](https://github.com/thetek42/tekformer/blob/master/docs/documentation.md)
+
 - [Godot Engine](https://godotengine.org)
 
 

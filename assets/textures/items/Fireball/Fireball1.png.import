@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Fireball1.png-97bf96475feaba21f9bed443a7aa4a06.stex"
+path="res://.import/fireball1.png-4acb557cc95316bd7c7a1888f1fa8840.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://assets/textures/items/Fireball/Fireball1.png"
-dest_files=[ "res://.import/Fireball1.png-97bf96475feaba21f9bed443a7aa4a06.stex" ]
+source_file="res://assets/textures/items/fireball/fireball1.png"
+dest_files=[ "res://.import/fireball1.png-4acb557cc95316bd7c7a1888f1fa8840.stex" ]
 
 [params]
 

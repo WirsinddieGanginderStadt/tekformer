@@ -3,12 +3,12 @@
 [ext_resource path="res://assets/fonts/HUD.tres" type="DynamicFont" id=1]
 [ext_resource path="res://ui/FPS.gd" type="Script" id=2]
 
-[sub_resource type="DynamicFontData" id=2]
+[sub_resource type="DynamicFontData" id=1]
 font_path = "res://assets/fonts/SF-Pro-Text-Regular.otf"
 
-[sub_resource type="DynamicFont" id=3]
+[sub_resource type="DynamicFont" id=2]
 size = 14
-font_data = SubResource( 2 )
+font_data = SubResource( 1 )
 
 [node name="HUD" type="ParallaxBackground"]
 layer = 1
@@ -49,6 +49,18 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
+[node name="Coins" type="Label" parent="."]
+margin_left = 921.285
+margin_top = 38.2848
+margin_right = 984.285
+margin_bottom = 56.2848
+custom_fonts/font = ExtResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "Coins: 0"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="MarginContainer" type="MarginContainer" parent="."]
 anchor_right = 1.0
 anchor_bottom = 1.0
@@ -82,17 +94,5 @@ self_modulate = Color( 0, 0, 0, 1 )
 margin_top = 562.0
 margin_right = 26.0
 margin_bottom = 580.0
-custom_fonts/font = SubResource( 3 )
+custom_fonts/font = SubResource( 2 )
 text = "FPS"
-
-[node name="Coins" type="Label" parent="."]
-margin_left = 921.0
-margin_top = 45.0
-margin_right = 1002.0
-margin_bottom = 62.0
-rect_pivot_offset = Vector2( 499.201, 376.269 )
-custom_colors/font_color = Color( 0, 0, 0, 1 )
-text = "Coins:"
-__meta__ = {
-"_edit_use_anchors_": false
-}

@@ -7,11 +7,6 @@
 
 [sub_resource type="SpriteFrames" id=1]
 animations = [ {
-"frames": [ ExtResource( 4 ) ],
-"loop": true,
-"name": "dead",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 2 ), ExtResource( 3 ) ],
 "loop": true,
 "name": "walk",
@@ -21,16 +16,21 @@ animations = [ {
 "loop": true,
 "name": "stand",
 "speed": 5.0
+}, {
+"frames": [ ExtResource( 4 ) ],
+"loop": true,
+"name": "dead",
+"speed": 5.0
 } ]
 
 [sub_resource type="RectangleShape2D" id=2]
 extents = Vector2( 29.0554, 16.1874 )
 
 [sub_resource type="RectangleShape2D" id=3]
-extents = Vector2( 20.3019, 0.804782 )
+extents = Vector2( 18, 0.804782 )
 
 [sub_resource type="RectangleShape2D" id=4]
-extents = Vector2( 20.3556, 16.1735 )
+extents = Vector2( 18.454, 16.1735 )
 
 [node name="SlimeGreen" type="KinematicBody2D"]
 script = ExtResource( 1 )
@@ -44,6 +44,7 @@ playing = true
 [node name="Area2D_Side" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D_Side"]
+visible = false
 position = Vector2( 0, 0.96202 )
 shape = SubResource( 2 )
 

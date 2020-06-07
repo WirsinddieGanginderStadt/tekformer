@@ -17,6 +17,7 @@ func _on_body_entered(body: Node) -> void: # run if the player collides with the
 	anim_player.play("fade_out") #  the associated animation is played: coin dissapears
 
 
+
 #resets the Coin 
 func reseting_Coin():
 	_is_coin_collected = false

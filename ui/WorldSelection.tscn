@@ -22,6 +22,7 @@ region_rect = Rect2( 0, 0, 256, 48 )
 [node name="Node2D" type="Node2D"]
 
 [node name="FadeIn" parent="." instance=ExtResource( 10 )]
+position = Vector2( 0, -2 )
 
 [node name="Buttons" type="Node2D" parent="."]
 position = Vector2( 21, -14 )
@@ -167,6 +168,9 @@ margin_right = 91.0
 margin_bottom = 36.0
 custom_fonts/font = ExtResource( 5 )
 text = "World 8"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="Skin_OptionButton" type="OptionButton" parent="Buttons"]
 margin_left = 558.0
@@ -200,6 +204,30 @@ position = Vector2( 157.981, -153.678 )
 scale = Vector2( 1.5, 1.5 )
 texture = ExtResource( 9 )
 
+[node name="Credits" type="TextureButton" parent="Buttons"]
+margin_left = 694.0
+margin_top = 64.0
+margin_right = 950.0
+margin_bottom = 112.0
+texture_normal = ExtResource( 2 )
+texture_hover = ExtResource( 3 )
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Buttons/Credits"]
+margin_left = 20.0
+margin_top = 11.0
+margin_right = 236.0
+margin_bottom = 36.0
+custom_fonts/font = ExtResource( 5 )
+text = "Credits"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
 [node name="ParallaxBackground" parent="." instance=ExtResource( 6 )]
 [connection signal="button_down" from="Buttons/1" to="Buttons/1" method="_on_TextureButton_button_down"]
 [connection signal="button_down" from="Buttons/2" to="Buttons/2" method="_on_TextureButton_button_down"]
@@ -209,3 +237,4 @@ texture = ExtResource( 9 )
 [connection signal="button_down" from="Buttons/6" to="Buttons/6" method="_on_TextureButton_button_down"]
 [connection signal="button_down" from="Buttons/7" to="Buttons/7" method="_on_TextureButton_button_down"]
 [connection signal="button_down" from="Buttons/8" to="Buttons/8" method="_on_TextureButton_button_down"]
+[connection signal="button_down" from="Buttons/Credits" to="Buttons/Credits" method="_on_TextureButton_button_down"]

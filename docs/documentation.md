@@ -10,3 +10,4 @@ Work in Progress!
 | D, &rarr;        | Move right        |
 | W, Space, &uarr; | Jump              |
 | Esc              | Pause/Resume Game |
+Double Jumps are possible!

@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://levels/LevelControls.gd" type="Script" id=1]
 [ext_resource path="res://levels/ParallaxBackground1.tscn" type="PackedScene" id=2]
@@ -8,8 +8,9 @@
 [ext_resource path="res://ui/Fade/FadeOut.tscn" type="PackedScene" id=6]
 [ext_resource path="res://ui/HUD.tscn" type="PackedScene" id=7]
 [ext_resource path="res://ui/Fade/FadeIn.tscn" type="PackedScene" id=8]
-[ext_resource path="res://Objects/AllCoins.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Objects/Coin.tscn" type="PackedScene" id=9]
 [ext_resource path="res://ui/PauseScreen.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Objects/AllCoins.tscn" type="PackedScene" id=11]
 
 [node name="1-1" type="Node2D"]
 script = ExtResource( 1 )
@@ -43,4 +44,43 @@ position = Vector2( 6253, 351 )
 [node name="PauseScreen" parent="CanvasLayer" instance=ExtResource( 10 )]
 visible = false
 
-[node name="AllCoins" parent="." instance=ExtResource( 9 )]
+[node name="AllCoins" parent="." instance=ExtResource( 11 )]
+
+[node name="Coin" parent="AllCoins" instance=ExtResource( 9 )]
+position = Vector2( 696, 192 )
+
+[node name="Coin2" parent="AllCoins" instance=ExtResource( 9 )]
+position = Vector2( 736, 192 )
+
+[node name="Coin3" parent="AllCoins" instance=ExtResource( 9 )]
+position = Vector2( 656, 192 )
+
+[node name="Coin4" parent="AllCoins" instance=ExtResource( 9 )]
+position = Vector2( 776, 192 )
+
+[node name="Coin8" parent="AllCoins" instance=ExtResource( 9 )]
+position = Vector2( 1976, 112 )
+
+[node name="Coin7" parent="AllCoins" instance=ExtResource( 9 )]
+position = Vector2( 2016, 112 )
+
+[node name="Coin6" parent="AllCoins" instance=ExtResource( 9 )]
+position = Vector2( 1936, 112 )
+
+[node name="Coin5" parent="AllCoins" instance=ExtResource( 9 )]
+position = Vector2( 2056, 112 )
+
+[node name="Coin12" parent="AllCoins" instance=ExtResource( 9 )]
+position = Vector2( 4904, 232 )
+
+[node name="Coin11" parent="AllCoins" instance=ExtResource( 9 )]
+position = Vector2( 4944, 232 )
+
+[node name="Coin10" parent="AllCoins" instance=ExtResource( 9 )]
+position = Vector2( 4864, 232 )
+
+[node name="Coin9" parent="AllCoins" instance=ExtResource( 9 )]
+position = Vector2( 4984, 232 )
+
+[node name="Coin13" parent="AllCoins" instance=ExtResource( 9 )]
+position = Vector2( 6400, 248 )

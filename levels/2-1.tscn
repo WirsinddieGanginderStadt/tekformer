@@ -9,7 +9,7 @@
 [ext_resource path="res://ui/Fade/FadeIn.tscn" type="PackedScene" id=7]
 [ext_resource path="res://actors/enemies/cactus.tscn" type="PackedScene" id=8]
 [ext_resource path="res://ui/PauseScreen.tscn" type="PackedScene" id=9]
-[ext_resource path="res://actors/enemies/fly.tscn" type="PackedScene" id=10]
+[ext_resource path="res://interactables/NextLevelTeleporter.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Objects/AllCoins.tscn" type="PackedScene" id=11]
 
 [node name="1-12" type="Node2D"]
@@ -26,7 +26,10 @@ position = Vector2( -10.2977, -1.75818 )
 tile_set = ExtResource( 3 )
 cell_size = Vector2( 70, 70 )
 format = 1
-tile_data = PoolIntArray( 262176, 16, 0, 327681, 13, 0, 393217, 0, 0, 393220, 0, 0, 393223, 2, 0, 393224, 2, 0, 393225, 2, 0, 393226, 2, 0, 393227, 2, 0, 393228, 2, 0 )
+tile_data = PoolIntArray( 43, 13, 0, 65577, 6, 0, 65578, 0, 0, 65579, 0, 0, 131112, 6, 0, 131113, 10, 0, 131114, 11, 0, 131115, 11, 0, 196629, 0, 0, 196630, 0, 0, 196647, 6, 0, 196648, 11, 0, 196649, 11, 0, 196650, 11, 0, 196651, 11, 0, 262160, 13, 0, 262162, 0, 0, 262176, 13, 0, 262182, 4, 0, 262183, 10, 0, 262184, 11, 0, 262185, 11, 0, 262186, 11, 0, 262187, 11, 0, 262202, 0, 0, 262203, 0, 0, 262204, 0, 0, 327681, 13, 0, 327690, 13, 0, 327695, 0, 0, 327696, 0, 0, 327710, 6, 0, 327711, 4, 0, 327712, 4, 0, 327713, 4, 0, 327714, 4, 0, 393217, 0, 0, 393220, 0, 0, 393223, 2, 0, 393224, 2, 0, 393225, 2, 0, 393226, 2, 0, 393227, 2, 0, 393228, 2, 0, 393243, 13, 0, 393245, 6, 0, 393246, 10, 0, 393247, 11, 0, 393248, 11, 0, 393249, 11, 0, 393250, 11, 0, 393270, 0, 0, 393271, 0, 0, 458778, 0, 0, 458779, 0, 0, 458780, 0, 0, 458781, 10, 0, 458782, 11, 0, 458783, 11, 0, 458784, 11, 0, 458785, 11, 0, 458786, 11, 0, 524339, 0, 0, 524354, 0, 0, 524355, 0, 0, 524356, 0, 0, 524357, 0, 0, 524358, 0, 0, 524359, 0, 0, 524360, 0, 0, 524361, 0, 0, 524362, 0, 0, 524363, 0, 0, 524364, 0, 0, 524365, 0, 0, 524366, 0, 0, 524367, 0, 0, 524368, 0, 0, 589871, 0, 0, 589872, 0, 0, 589887, 0, 0 )
+
+[node name="cactus" parent="TileMap" instance=ExtResource( 8 )]
+position = Vector2( 2325, 290.11 )
 
 [node name="Player1" parent="." instance=ExtResource( 4 )]
 position = Vector2( 98, -56 )
@@ -34,9 +37,6 @@ position = Vector2( 98, -56 )
 [node name="HUD" parent="." instance=ExtResource( 6 )]
 
 [node name="Enemies" type="Node2D" parent="."]
-
-[node name="fly" parent="Enemies" instance=ExtResource( 10 )]
-position = Vector2( 690.084, 380.903 )
 
 [node name="cactus" parent="Enemies" instance=ExtResource( 8 )]
 position = Vector2( 321.814, 379.439 )
@@ -47,3 +47,12 @@ position = Vector2( 321.814, 379.439 )
 visible = false
 
 [node name="AllCoins" parent="." instance=ExtResource( 11 )]
+
+[node name="cactus" parent="." instance=ExtResource( 8 )]
+position = Vector2( 4795.7, 525.963 )
+
+[node name="cactus2" parent="." instance=ExtResource( 8 )]
+position = Vector2( 5145.5, 520.663 )
+
+[node name="2-2" parent="." instance=ExtResource( 10 )]
+position = Vector2( 5619.86, 539.213 )

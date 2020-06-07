@@ -1,11 +1,11 @@
 [gd_scene load_steps=10 format=2]
 
 [ext_resource path="res://ui/Fade/FadeOut.tscn" type="PackedScene" id=1]
-[ext_resource path="res://assets/ui/level button 1.png" type="Texture" id=2]
-[ext_resource path="res://assets/ui/level button 1 hover.png" type="Texture" id=3]
+[ext_resource path="res://assets/ui/level button 2 hover.png" type="Texture" id=2]
+[ext_resource path="res://assets/ui/level button 2.png" type="Texture" id=3]
 [ext_resource path="res://ui/LevelSelectionButtons.gd" type="Script" id=4]
 [ext_resource path="res://assets/fonts/SF-Pro-Text-Regular.otf" type="DynamicFontData" id=5]
-[ext_resource path="res://levels/ParallaxBackground1.tscn" type="PackedScene" id=6]
+[ext_resource path="res://levels/ParallaxBackground2.tscn" type="PackedScene" id=6]
 [ext_resource path="res://assets/textures/items/keys/keyYellow.png" type="Texture" id=7]
 [ext_resource path="res://ui/LevelSelection.gd" type="Script" id=9]
 
@@ -17,7 +17,7 @@ font_data = ExtResource( 5 )
 script = ExtResource( 9 )
 world = 2
 
-[node name="ParallaxBackground" parent="." instance=ExtResource( 6 )]
+[node name="ParallaxBackground2" parent="." instance=ExtResource( 6 )]
 
 [node name="FadeOut" parent="." instance=ExtResource( 1 )]
 position = Vector2( 1.22774, 0 )
@@ -30,8 +30,8 @@ margin_left = 32.0
 margin_top = 64.0
 margin_right = 96.0
 margin_bottom = 128.0
-texture_normal = ExtResource( 2 )
-texture_hover = ExtResource( 3 )
+texture_normal = ExtResource( 3 )
+texture_hover = ExtResource( 2 )
 script = ExtResource( 4 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -53,8 +53,8 @@ margin_left = 112.0
 margin_top = 64.0
 margin_right = 176.0
 margin_bottom = 128.0
-texture_normal = ExtResource( 2 )
-texture_hover = ExtResource( 3 )
+texture_normal = ExtResource( 3 )
+texture_hover = ExtResource( 2 )
 script = ExtResource( 4 )
 
 [node name="Label" type="Label" parent="Buttons/2-2"]
@@ -70,8 +70,8 @@ margin_left = 192.0
 margin_top = 64.0
 margin_right = 256.0
 margin_bottom = 128.0
-texture_normal = ExtResource( 2 )
-texture_hover = ExtResource( 3 )
+texture_normal = ExtResource( 3 )
+texture_hover = ExtResource( 2 )
 script = ExtResource( 4 )
 
 [node name="Label" type="Label" parent="Buttons/2-3"]
@@ -87,8 +87,8 @@ margin_left = 272.0
 margin_top = 64.0
 margin_right = 336.0
 margin_bottom = 128.0
-texture_normal = ExtResource( 2 )
-texture_hover = ExtResource( 3 )
+texture_normal = ExtResource( 3 )
+texture_hover = ExtResource( 2 )
 script = ExtResource( 4 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -107,8 +107,8 @@ margin_left = 352.0
 margin_top = 64.0
 margin_right = 416.0
 margin_bottom = 128.0
-texture_normal = ExtResource( 2 )
-texture_hover = ExtResource( 3 )
+texture_normal = ExtResource( 3 )
+texture_hover = ExtResource( 2 )
 script = ExtResource( 4 )
 
 [node name="Label" type="Label" parent="Buttons/2-5"]
@@ -124,8 +124,8 @@ margin_left = 432.0
 margin_top = 64.0
 margin_right = 496.0
 margin_bottom = 128.0
-texture_normal = ExtResource( 2 )
-texture_hover = ExtResource( 3 )
+texture_normal = ExtResource( 3 )
+texture_hover = ExtResource( 2 )
 script = ExtResource( 4 )
 
 [node name="Label" type="Label" parent="Buttons/2-6"]
@@ -141,8 +141,8 @@ margin_left = 32.0
 margin_top = 144.0
 margin_right = 96.0
 margin_bottom = 208.0
-texture_normal = ExtResource( 2 )
-texture_hover = ExtResource( 3 )
+texture_normal = ExtResource( 3 )
+texture_hover = ExtResource( 2 )
 script = ExtResource( 4 )
 
 [node name="Label" type="Label" parent="Buttons/2-7"]
@@ -158,8 +158,8 @@ margin_left = 112.0
 margin_top = 144.0
 margin_right = 176.0
 margin_bottom = 208.0
-texture_normal = ExtResource( 2 )
-texture_hover = ExtResource( 3 )
+texture_normal = ExtResource( 3 )
+texture_hover = ExtResource( 2 )
 script = ExtResource( 4 )
 
 [node name="Label" type="Label" parent="Buttons/2-8"]
@@ -175,8 +175,8 @@ margin_left = 192.0
 margin_top = 144.0
 margin_right = 256.0
 margin_bottom = 208.0
-texture_normal = ExtResource( 2 )
-texture_hover = ExtResource( 3 )
+texture_normal = ExtResource( 3 )
+texture_hover = ExtResource( 2 )
 script = ExtResource( 4 )
 
 [node name="Label" type="Label" parent="Buttons/2-9"]
@@ -192,8 +192,8 @@ margin_left = 272.0
 margin_top = 144.0
 margin_right = 336.0
 margin_bottom = 208.0
-texture_normal = ExtResource( 2 )
-texture_hover = ExtResource( 3 )
+texture_normal = ExtResource( 3 )
+texture_hover = ExtResource( 2 )
 script = ExtResource( 4 )
 
 [node name="Label" type="Label" parent="Buttons/2-10"]
@@ -209,8 +209,8 @@ margin_left = 352.0
 margin_top = 144.0
 margin_right = 416.0
 margin_bottom = 208.0
-texture_normal = ExtResource( 2 )
-texture_hover = ExtResource( 3 )
+texture_normal = ExtResource( 3 )
+texture_hover = ExtResource( 2 )
 script = ExtResource( 4 )
 __meta__ = {
 "_edit_use_anchors_": false
@@ -229,8 +229,8 @@ margin_left = 432.0
 margin_top = 144.0
 margin_right = 496.0
 margin_bottom = 208.0
-texture_normal = ExtResource( 2 )
-texture_hover = ExtResource( 3 )
+texture_normal = ExtResource( 3 )
+texture_hover = ExtResource( 2 )
 script = ExtResource( 4 )
 
 [node name="Label" type="Label" parent="Buttons/2-12"]

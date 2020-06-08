@@ -22,7 +22,9 @@ func load_game():
 	file.close()
 
 func button_disable():
-	for i in ["1-2","1-3","1-4","1-5","1-6","1-7","1-8","1-9","1-10","1-11","1-12"]:
+	var levels = ["1-2","1-3","1-4","1-5","1-6","1-7","1-8","1-9","1-10","1-11","1-12"]
+	for i in levels:
+		i[0] = String(world)
 		if data["world"+String(world)][i] == false:
 			get_node("Overlay/Overlay" +String(i)).visible = false
 		if data["world"+String(world)][i] == true:

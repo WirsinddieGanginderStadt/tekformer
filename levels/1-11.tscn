@@ -64,12 +64,12 @@ position = Vector2( 5910.15, 264.46 )
 [node name="Spinner6" parent="Enemies" instance=ExtResource( 10 )]
 position = Vector2( 2292.88, 265.501 )
 
-[node name="Spinner2" parent="Enemies/Spinner6" instance=ExtResource( 10 )]
-position = Vector2( 2640.18, 30.8255 )
+[node name="Spinner7" parent="Enemies" instance=ExtResource( 10 )]
+position = Vector2( 4933.06, 296.327 )
 rotation = -3.14159
 
-[node name="Spinner" parent="Enemies/Spinner6" instance=ExtResource( 10 )]
-position = Vector2( 2131.83, 30.8256 )
+[node name="Spinner8" parent="Enemies" instance=ExtResource( 10 )]
+position = Vector2( 4424.71, 296.327 )
 rotation = 3.14159
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]

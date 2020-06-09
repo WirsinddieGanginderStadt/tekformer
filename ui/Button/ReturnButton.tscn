@@ -1,0 +1,17 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://ui/Button/ReturnButton.gd" type="Script" id=1]
+[ext_resource path="res://assets/ui/button_Return hover.png" type="Texture" id=2]
+[ext_resource path="res://assets/ui/button_Return.png" type="Texture" id=3]
+
+[node name="ReturnButton" type="TextureButton"]
+margin_left = 826.0
+margin_top = 60.0
+margin_right = 929.0
+margin_bottom = 109.0
+texture_normal = ExtResource( 3 )
+texture_hover = ExtResource( 2 )
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}

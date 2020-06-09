@@ -7,7 +7,7 @@
 [ext_resource path="res://assets/fonts/SF-Pro-Text-Regular.otf" type="DynamicFontData" id=5]
 [ext_resource path="res://levels/ParallaxBackground3.tscn" type="PackedScene" id=6]
 [ext_resource path="res://assets/textures/items/keys/keyYellow.png" type="Texture" id=7]
-[ext_resource path="res://ui/ReturnButton.gd" type="Script" id=8]
+[ext_resource path="res://ui/Button/ReturnButton.tscn" type="PackedScene" id=8]
 [ext_resource path="res://ui/LevelSelection.gd" type="Script" id=9]
 
 [sub_resource type="DynamicFont" id=1]
@@ -360,17 +360,7 @@ __meta__ = {
 "_edit_use_anchors_": false
 }
 
-[node name="ReturnButton" type="TextureButton" parent="."]
-margin_left = 800.832
-margin_top = 32.0077
-margin_right = 865.832
-margin_bottom = 96.0077
-texture_normal = ExtResource( 3 )
-texture_hover = ExtResource( 2 )
-script = ExtResource( 8 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
+[node name="ReturnButton" parent="." instance=ExtResource( 8 )]
 [connection signal="button_down" from="Buttons/3-1" to="Buttons/3-1" method="_on_TextureButton_button_down"]
 [connection signal="button_down" from="Buttons/3-2" to="Buttons/3-2" method="_on_TextureButton_button_down"]
 [connection signal="button_down" from="Buttons/3-3" to="Buttons/3-3" method="_on_TextureButton_button_down"]

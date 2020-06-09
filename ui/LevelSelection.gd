@@ -1,6 +1,6 @@
 """
 	LEVELSELECTION.GD
-	@auth jm
+	@auth jm, ds
 	@desc handles the locksystem of the levels
 """
 

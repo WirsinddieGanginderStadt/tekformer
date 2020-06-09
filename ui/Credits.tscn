@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://levels/ParallaxBackground1.tscn" type="PackedScene" id=1]
 [ext_resource path="res://assets/fonts/SF-Pro-Text-Bold.otf" type="DynamicFontData" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://assets/ui/button1.png" type="Texture" id=4]
 [ext_resource path="res://assets/ui/button1 hover.png" type="Texture" id=5]
 [ext_resource path="res://ui/Credits.gd" type="Script" id=6]
+[ext_resource path="res://ui/DevelopButton.gd" type="Script" id=7]
 
 [sub_resource type="DynamicFontData" id=1]
 font_path = "res://assets/fonts/SF-Pro-Text-Regular.otf"
@@ -196,4 +197,15 @@ text = "Back to World Selection"
 __meta__ = {
 "_edit_use_anchors_": false
 }
+
+[node name="TextureButton2" type="TextureButton" parent="."]
+margin_left = 673.282
+margin_top = 59.8936
+margin_right = 929.282
+margin_bottom = 107.894
+script = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
 [connection signal="button_down" from="TextureButton" to="TextureButton" method="_on_TextureButton_button_down"]
+[connection signal="button_down" from="TextureButton2" to="TextureButton2" method="_on_TextureButton_button_down"]

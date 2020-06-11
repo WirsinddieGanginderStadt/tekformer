@@ -53,7 +53,6 @@ func _physics_process(delta):
 #    @param delta [float]: time between two frames, filled in by the engine
 
 func _process(delta: float):
-	
 	_coins_collected = $AllCoins.coins_collected # getting var out of AllCoins and writting it into LevelControls
 	$HUD/Coins.text = "Coins: " + String(_coins_collected) # Writing Coins into HUD
 	

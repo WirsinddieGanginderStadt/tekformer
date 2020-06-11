@@ -1,2 +1,4 @@
 $RECYCLE.BIN/*
 .import/*
+data/*
+config.cfg

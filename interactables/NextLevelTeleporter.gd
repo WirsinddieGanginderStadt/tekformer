@@ -30,15 +30,41 @@ func save_file():
 func edit_file():
 	data["world"+String(world)][name] = false #the boolean willl be changed
 
+
+
 """ _ON_AREA2D_AREA_ENTERED: detects if another area enters the hitbox of this object """
 #   @param area: unused, filled in by the 
 
 func _on_Area2D_body_entered(body: Node) -> void:
 	if body.name == "Player1":
-		print("Finished Level " + get_tree().current_scene.name + " within " + get_tree().current_scene.get_node("HUD").get_node("Timer").text.replace("Timer: ", "") + " seconds.")   # log needed time
-		get_tree().current_scene.get_node("FadeOut").fadeout("res://levels/" + name + ".tscn")   # call function of fadeout nod
+		var time = get_tree().current_scene.get_node("HUD").get_node("Timer").text.replace("Timer: ", "")
+		print("Finished Level " + get_tree().current_scene.name + " within " + time + " seconds.")   # log needed time
 		if name == "WorldSelection":
-			get_tree().change_scene("res://ui/WorldSelection.tscn")
+			write_highscore(time)
+			get_tree().current_scene.get_node("FadeOut").fadeout("res://ui/WorldSelection.tscn")   # call function of fadeout node
 		else:
 			edit_file() 
 			save_file()
+			write_highscore(time)
+			get_tree().current_scene.get_node("FadeOut").fadeout("res://levels/" + name + ".tscn")   # call function of fadeout nod
+
+
+
+""" WRITE_HIGHSCORE: writes the time into the highscores file. """
+#   @param time [float]: amount of seconds the run lasted.
+
+func write_highscore(time):
+	var file = File.new()
+	file.open('res://data/highscores.json', file.READ_WRITE)
+	var fileContents = file.get_as_text()
+	var jsonData = parse_json(fileContents)
+	
+	var levelName = get_tree().current_scene.filename.split("/")[-1].replace(".tscn", "")
+	
+	if typeof(jsonData["world" + levelName[0]][levelName]) == TYPE_BOOL:
+		jsonData["world" + levelName[0]][levelName] = float(time)
+	else:
+		jsonData["world" + levelName[0]][levelName] = min(float(time), float(jsonData["world" + levelName[0]][levelName]))
+	
+	file.store_line(to_json(jsonData))
+	file.close()

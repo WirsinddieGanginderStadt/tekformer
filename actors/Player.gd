@@ -122,6 +122,8 @@ func animate_sprite(_skin: int):
 	$AnimatedSpriteMale1.visible = false
 	$AnimatedSpriteFemale1.visible = false
 	$AnimatedSpriteAdventurer1.visible = false
+	$AnimatedSpriteSoldier1.visible = false
+	
 	if skin == 0:
 		
 		$AnimatedSpriteMale1.visible = true
@@ -203,6 +205,33 @@ func animate_sprite(_skin: int):
 			$AnimatedSpriteAdventurer1.set_flip_h(true)
 		elif Input.is_action_pressed("P1-RIGHT"):
 			$AnimatedSpriteAdventurer1.set_flip_h(false)
+	
+	if skin == 3:
+		
+		$AnimatedSpriteSoldier1.visible = true
+	
+		if _velocity.y < 0:
+			$AnimatedSpriteSoldier1.play("jump")
+		elif _velocity.y > 0 and Input.is_action_pressed("P1-JUMP"):
+			$AnimatedSpriteSoldier1.play("jump")
+		elif _velocity.y > 0:
+			$AnimatedSpriteSoldier1.play("fall")
+		elif Input.is_action_pressed("P1-LEFT") and Input.is_action_pressed("P1-RIGHT"):
+			$AnimatedSpriteSoldier1.play("stand")
+		elif Input.is_action_pressed("P1-LEFT"):
+			$AnimatedSpriteSoldier1.play("walk")
+		elif Input.is_action_pressed("P1-RIGHT"):
+			$AnimatedSpriteSoldier1.play("walk")
+		else:
+			$AnimatedSpriteSoldier1.play("stand")
+	
+		# flip sprite depending on where the player faces/goes to
+		if Input.is_action_pressed("P1-LEFT") and Input.is_action_pressed("P1-RIGHT"):
+			pass   # skip if block if both left and right buttons are pressed
+		elif Input.is_action_pressed("P1-LEFT"):
+			$AnimatedSpriteSoldier1.set_flip_h(true)
+		elif Input.is_action_pressed("P1-RIGHT"):
+			$AnimatedSpriteSoldier1.set_flip_h(false)
 
 
 

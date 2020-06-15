@@ -141,6 +141,8 @@ func animate_sprite(_skin: int):
 			$AnimatedSpriteMale1.play("walk")
 		elif Input.is_action_pressed("P1-RIGHT"):
 			$AnimatedSpriteMale1.play("walk")
+		elif Input.is_action_pressed("P1-CHEER"):
+			$AnimatedSpriteMale1.play("cheer")
 		else:
 			$AnimatedSpriteMale1.play("stand")
 	
@@ -169,6 +171,8 @@ func animate_sprite(_skin: int):
 			$AnimatedSpriteFemale1.play("walk")
 		elif Input.is_action_pressed("P1-RIGHT"):
 			$AnimatedSpriteFemale1.play("walk")
+		elif Input.is_action_pressed("P1-CHEER"):
+			$AnimatedSpriteFemale1.play("cheer")
 		else:
 			$AnimatedSpriteFemale1.play("stand")
 	
@@ -195,6 +199,8 @@ func animate_sprite(_skin: int):
 			$AnimatedSpriteAdventurer1.play("walk")
 		elif Input.is_action_pressed("P1-RIGHT"):
 			$AnimatedSpriteAdventurer1.play("walk")
+		elif Input.is_action_pressed("P1-CHEER"):
+			$AnimatedSpriteAdventurer1.play("cheer")
 		else:
 			$AnimatedSpriteAdventurer1.play("stand")
 	
@@ -222,6 +228,8 @@ func animate_sprite(_skin: int):
 			$AnimatedSpriteSoldier1.play("walk")
 		elif Input.is_action_pressed("P1-RIGHT"):
 			$AnimatedSpriteSoldier1.play("walk")
+		elif Input.is_action_pressed("P1-CHEER"):
+			$AnimatedSpriteSoldier1.play("cheer")
 		else:
 			$AnimatedSpriteSoldier1.play("stand")
 	

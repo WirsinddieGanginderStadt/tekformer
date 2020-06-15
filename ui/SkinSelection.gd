@@ -17,10 +17,11 @@ func _ready():
 	add_item("Hans", 0)
 	add_item("Kara", 1)
 	add_item("Indi", 2)
-	add_item("<>", 3)
+	add_item("Alex", 3)
 	
 	$Female1.visible = false
 	$Male1.visible = false
+	$Adventurer1.visible = false
 	$Soldier1.visible = false
 	
 	writing_skin_in_config(skin)

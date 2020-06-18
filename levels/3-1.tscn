@@ -123,3 +123,4 @@ position = Vector2( 4640, 336 )
 
 [node name="3-2" parent="." instance=ExtResource( 13 )]
 position = Vector2( 11888, 488 )
+world = 3

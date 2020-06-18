@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://ui/SkinSelection.gd" type="Script" id=1]
 [ext_resource path="res://assets/ui/button1.png" type="Texture" id=2]
@@ -11,6 +11,7 @@
 [ext_resource path="res://assets/textures/sprites/adventurer/Poses/adventurer_idle.png" type="Texture" id=9]
 [ext_resource path="res://ui/Fade/FadeIn.tscn" type="PackedScene" id=10]
 [ext_resource path="res://assets/textures/sprites/soldier/Poses/soldier_idle.png" type="Texture" id=11]
+[ext_resource path="res://assets/textures/sprites/zombie/Poses/zombie_idle.png" type="Texture" id=12]
 
 [sub_resource type="StyleBoxTexture" id=1]
 texture = ExtResource( 3 )
@@ -209,6 +210,11 @@ texture = ExtResource( 9 )
 position = Vector2( 157.981, -153.678 )
 scale = Vector2( 1.5, 1.5 )
 texture = ExtResource( 11 )
+
+[node name="Zombie1" type="Sprite" parent="Buttons/Skin_OptionButton"]
+position = Vector2( 157.981, -153.678 )
+scale = Vector2( 1.5, 1.5 )
+texture = ExtResource( 12 )
 
 [node name="Credits" type="TextureButton" parent="Buttons"]
 margin_left = 694.0

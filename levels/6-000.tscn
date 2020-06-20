@@ -1,0 +1,48 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://tilesets/world6.tres" type="TileSet" id=1]
+[ext_resource path="res://levels/LevelControls.gd" type="Script" id=2]
+[ext_resource path="res://ui/Fade/FadeIn.tscn" type="PackedScene" id=3]
+[ext_resource path="res://ui/PauseScreen.tscn" type="PackedScene" id=4]
+[ext_resource path="res://actors/enemies/Lava01.tscn" type="PackedScene" id=5]
+[ext_resource path="res://ui/HUD.tscn" type="PackedScene" id=6]
+[ext_resource path="res://ui/Fade/FadeOut.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Objects/AllCoins.tscn" type="PackedScene" id=8]
+[ext_resource path="res://actors/Player.tscn" type="PackedScene" id=9]
+[ext_resource path="res://interactables/NextLevelTeleporter.tscn" type="PackedScene" id=10]
+
+[node name="6-000" type="Node2D"]
+script = ExtResource( 2 )
+
+[node name="FadeIn" parent="." instance=ExtResource( 3 )]
+position = Vector2( -1, 1 )
+
+[node name="FadeOut" parent="." instance=ExtResource( 7 )]
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 70, 70 )
+cell_custom_transform = Transform2D( 1, 0, 0, 1, 1, 0 )
+format = 1
+tile_data = PoolIntArray( 327689, 17, 0, 327690, 18, 0, 327691, 18, 0, 327692, 18, 0, 327693, 18, 0, 327694, 18, 0, 327695, 19, 0, 393216, 0, 0, 393217, 0, 0, 393218, 0, 0, 393219, 0, 0, 393220, 0, 0, 393221, 0, 0, 393222, 0, 0 )
+
+[node name="Player1" parent="." instance=ExtResource( 9 )]
+position = Vector2( 98, -56 )
+
+[node name="6-1" parent="." instance=ExtResource( 10 )]
+position = Vector2( 6253, 351 )
+world = 6
+
+[node name="HUD" parent="." instance=ExtResource( 6 )]
+
+[node name="Enemies" type="Node2D" parent="."]
+
+[node name="Lava01" parent="Enemies" instance=ExtResource( 5 )]
+position = Vector2( 158.479, 188.753 )
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="PauseScreen" parent="CanvasLayer" instance=ExtResource( 4 )]
+visible = false
+
+[node name="AllCoins" parent="." instance=ExtResource( 8 )]

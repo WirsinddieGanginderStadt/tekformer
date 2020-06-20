@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=32 format=2]
 
 [ext_resource path="res://actors/Player.gd" type="Script" id=1]
 [ext_resource path="res://assets/textures/sprites/player/Poses/player_idle.png" type="Texture" id=2]
@@ -13,6 +13,19 @@
 [ext_resource path="res://assets/textures/sprites/adventurer/Poses/adventurer_walk2.png" type="Texture" id=11]
 [ext_resource path="res://assets/textures/sprites/adventurer/Poses/adventurer_walk1.png" type="Texture" id=12]
 [ext_resource path="res://assets/textures/sprites/adventurer/Poses/adventurer_idle.png" type="Texture" id=13]
+[ext_resource path="res://assets/AnimatedSprites/Player_SoldierSprite3.tres" type="SpriteFrames" id=14]
+[ext_resource path="res://assets/textures/sprites/player/Poses/player_cheer2.png" type="Texture" id=15]
+[ext_resource path="res://assets/textures/sprites/player/Poses/player_cheer1.png" type="Texture" id=16]
+[ext_resource path="res://assets/textures/sprites/adventurer/Poses/adventurer_cheer1.png" type="Texture" id=17]
+[ext_resource path="res://assets/textures/sprites/adventurer/Poses/adventurer_cheer2.png" type="Texture" id=18]
+[ext_resource path="res://assets/textures/sprites/zombie/Poses/zombie_walk2.png" type="Texture" id=19]
+[ext_resource path="res://assets/textures/sprites/zombie/Poses/zombie_stand.png" type="Texture" id=20]
+[ext_resource path="res://assets/textures/sprites/zombie/Poses/zombie_idle.png" type="Texture" id=21]
+[ext_resource path="res://assets/textures/sprites/zombie/Poses/zombie_fall.png" type="Texture" id=22]
+[ext_resource path="res://assets/textures/sprites/zombie/Poses/zombie_cheer1.png" type="Texture" id=23]
+[ext_resource path="res://assets/textures/sprites/zombie/Poses/zombie_cheer2.png" type="Texture" id=24]
+[ext_resource path="res://assets/textures/sprites/zombie/Poses/zombie_jump.png" type="Texture" id=25]
+[ext_resource path="res://assets/textures/sprites/zombie/Poses/zombie_walk1.png" type="Texture" id=26]
 
 [sub_resource type="RectangleShape2D" id=1]
 extents = Vector2( 24.3431, 41.0059 )
@@ -32,15 +45,20 @@ animations = [ {
 "name": "fall",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 3 ) ],
-"loop": true,
-"name": "jump",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 4 ), ExtResource( 2 ), ExtResource( 5 ), ExtResource( 2 ) ],
 "loop": true,
 "name": "walk",
 "speed": 8.0
+}, {
+"frames": [ ExtResource( 2 ), ExtResource( 16 ), ExtResource( 15 ) ],
+"loop": true,
+"name": "cheer",
+"speed": 8.0
+}, {
+"frames": [ ExtResource( 3 ) ],
+"loop": true,
+"name": "jump",
+"speed": 5.0
 } ]
 
 [sub_resource type="SpriteFrames" id=4]
@@ -55,15 +73,48 @@ animations = [ {
 "name": "fall",
 "speed": 5.0
 }, {
-"frames": [ ExtResource( 9 ) ],
-"loop": true,
-"name": "jump",
-"speed": 5.0
-}, {
 "frames": [ ExtResource( 12 ), ExtResource( 13 ), ExtResource( 11 ), ExtResource( 13 ) ],
 "loop": true,
 "name": "walk",
 "speed": 8.0
+}, {
+"frames": [ ExtResource( 13 ), ExtResource( 17 ), ExtResource( 18 ) ],
+"loop": true,
+"name": "cheer",
+"speed": 8.0
+}, {
+"frames": [ ExtResource( 9 ) ],
+"loop": true,
+"name": "jump",
+"speed": 5.0
+} ]
+
+[sub_resource type="SpriteFrames" id=5]
+animations = [ {
+"frames": [ ExtResource( 20 ) ],
+"loop": true,
+"name": "stand",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 22 ) ],
+"loop": true,
+"name": "fall",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 26 ), ExtResource( 21 ), ExtResource( 19 ), ExtResource( 21 ) ],
+"loop": true,
+"name": "walk",
+"speed": 8.0
+}, {
+"frames": [ ExtResource( 21 ), ExtResource( 24 ), ExtResource( 23 ) ],
+"loop": true,
+"name": "cheer",
+"speed": 5.0
+}, {
+"frames": [ ExtResource( 25 ) ],
+"loop": true,
+"name": "jump",
+"speed": 5.0
 } ]
 
 [node name="Player1" type="KinematicBody2D"]
@@ -84,13 +135,6 @@ shape = SubResource( 2 )
 position = Vector2( 1.717, 13.207 )
 shape = SubResource( 1 )
 
-[node name="AnimatedSpriteMale1" type="AnimatedSprite" parent="."]
-visible = false
-light_mask = 0
-frames = SubResource( 3 )
-animation = "stand"
-playing = true
-
 [node name="Camera2D" type="Camera2D" parent="."]
 offset = Vector2( 150, 0 )
 current = true
@@ -107,11 +151,31 @@ drag_margin_bottom = 0.0
 [node name="Position2D" type="Position2D" parent="."]
 position = Vector2( 60, 20 )
 
-[node name="AnimatedSpriteFemale1" type="AnimatedSprite" parent="."]
+[node name="Skins" type="Node2D" parent="."]
+
+[node name="AnimatedSpriteMale1" type="AnimatedSprite" parent="Skins"]
+visible = false
+light_mask = 0
+frames = SubResource( 3 )
+animation = "cheer"
+playing = true
+
+[node name="AnimatedSpriteFemale1" type="AnimatedSprite" parent="Skins"]
 visible = false
 frames = ExtResource( 7 )
-animation = "stand"
+animation = "cheer"
 
-[node name="AnimatedSpriteAdventurer1" type="AnimatedSprite" parent="."]
+[node name="AnimatedSpriteAdventurer1" type="AnimatedSprite" parent="Skins"]
+visible = false
 frames = SubResource( 4 )
-animation = "stand"
+animation = "cheer"
+
+[node name="AnimatedSpriteSoldier1" type="AnimatedSprite" parent="Skins"]
+visible = false
+frames = ExtResource( 14 )
+animation = "cheer"
+
+[node name="AnimatedSpriteZombie1" type="AnimatedSprite" parent="Skins"]
+visible = false
+frames = SubResource( 5 )
+animation = "cheer"

@@ -1,0 +1,375 @@
+[gd_scene load_steps=11 format=2]
+
+[ext_resource path="res://ui/Fade/FadeOut.tscn" type="PackedScene" id=1]
+[ext_resource path="res://assets/ui/level button 2 hover.png" type="Texture" id=2]
+[ext_resource path="res://assets/ui/level button 2.png" type="Texture" id=3]
+[ext_resource path="res://ui/LevelSelectionButtons.gd" type="Script" id=4]
+[ext_resource path="res://assets/fonts/SF-Pro-Text-Regular.otf" type="DynamicFontData" id=5]
+[ext_resource path="res://levels/ParallaxBackground3.tscn" type="PackedScene" id=6]
+[ext_resource path="res://assets/textures/items/keys/keyYellow.png" type="Texture" id=7]
+[ext_resource path="res://ui/Button/ReturnButton.tscn" type="PackedScene" id=8]
+[ext_resource path="res://ui/LevelSelection.gd" type="Script" id=9]
+
+[sub_resource type="DynamicFont" id=1]
+size = 24
+font_data = ExtResource( 5 )
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource( 9 )
+world = 3
+
+[node name="ParallaxBackground3" parent="." instance=ExtResource( 6 )]
+
+[node name="FadeOut" parent="." instance=ExtResource( 1 )]
+position = Vector2( 1.22774, 0 )
+
+[node name="Buttons" type="Node2D" parent="."]
+position = Vector2( 248, 362 )
+
+[node name="6-1" type="TextureButton" parent="Buttons"]
+margin_left = 32.0
+margin_top = 64.0
+margin_right = 96.0
+margin_bottom = 128.0
+texture_normal = ExtResource( 3 )
+texture_hover = ExtResource( 2 )
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Buttons/6-1"]
+margin_right = 64.0
+margin_bottom = 64.0
+custom_fonts/font = SubResource( 1 )
+text = "6-1"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="6-2" type="TextureButton" parent="Buttons"]
+margin_left = 112.0
+margin_top = 64.0
+margin_right = 176.0
+margin_bottom = 128.0
+texture_normal = ExtResource( 3 )
+texture_hover = ExtResource( 2 )
+script = ExtResource( 4 )
+
+[node name="Label" type="Label" parent="Buttons/6-2"]
+margin_right = 64.0
+margin_bottom = 64.0
+custom_fonts/font = SubResource( 1 )
+text = "6-2"
+align = 1
+valign = 1
+
+[node name="6-3" type="TextureButton" parent="Buttons"]
+margin_left = 192.0
+margin_top = 64.0
+margin_right = 256.0
+margin_bottom = 128.0
+texture_normal = ExtResource( 3 )
+texture_hover = ExtResource( 2 )
+script = ExtResource( 4 )
+
+[node name="Label" type="Label" parent="Buttons/6-3"]
+margin_right = 64.0
+margin_bottom = 64.0
+custom_fonts/font = SubResource( 1 )
+text = "6-3"
+align = 1
+valign = 1
+
+[node name="6-4" type="TextureButton" parent="Buttons"]
+margin_left = 272.0
+margin_top = 64.0
+margin_right = 336.0
+margin_bottom = 128.0
+texture_normal = ExtResource( 3 )
+texture_hover = ExtResource( 2 )
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Buttons/6-4"]
+margin_right = 64.0
+margin_bottom = 64.0
+custom_fonts/font = SubResource( 1 )
+text = "6-4"
+align = 1
+valign = 1
+
+[node name="6-5" type="TextureButton" parent="Buttons"]
+margin_left = 352.0
+margin_top = 64.0
+margin_right = 416.0
+margin_bottom = 128.0
+texture_normal = ExtResource( 3 )
+texture_hover = ExtResource( 2 )
+script = ExtResource( 4 )
+
+[node name="Label" type="Label" parent="Buttons/6-5"]
+margin_right = 64.0
+margin_bottom = 64.0
+custom_fonts/font = SubResource( 1 )
+text = "6-5"
+align = 1
+valign = 1
+
+[node name="6-6" type="TextureButton" parent="Buttons"]
+margin_left = 432.0
+margin_top = 64.0
+margin_right = 496.0
+margin_bottom = 128.0
+texture_normal = ExtResource( 3 )
+texture_hover = ExtResource( 2 )
+script = ExtResource( 4 )
+
+[node name="Label" type="Label" parent="Buttons/6-6"]
+margin_right = 64.0
+margin_bottom = 64.0
+custom_fonts/font = SubResource( 1 )
+text = "6-6"
+align = 1
+valign = 1
+
+[node name="6-7" type="TextureButton" parent="Buttons"]
+margin_left = 32.0
+margin_top = 144.0
+margin_right = 96.0
+margin_bottom = 208.0
+texture_normal = ExtResource( 3 )
+texture_hover = ExtResource( 2 )
+script = ExtResource( 4 )
+
+[node name="Label" type="Label" parent="Buttons/6-7"]
+margin_right = 64.0
+margin_bottom = 64.0
+custom_fonts/font = SubResource( 1 )
+text = "6-7"
+align = 1
+valign = 1
+
+[node name="6-8" type="TextureButton" parent="Buttons"]
+margin_left = 112.0
+margin_top = 144.0
+margin_right = 176.0
+margin_bottom = 208.0
+texture_normal = ExtResource( 3 )
+texture_hover = ExtResource( 2 )
+script = ExtResource( 4 )
+
+[node name="Label" type="Label" parent="Buttons/6-8"]
+margin_right = 64.0
+margin_bottom = 64.0
+custom_fonts/font = SubResource( 1 )
+text = "6-8"
+align = 1
+valign = 1
+
+[node name="6-9" type="TextureButton" parent="Buttons"]
+margin_left = 192.0
+margin_top = 144.0
+margin_right = 256.0
+margin_bottom = 208.0
+texture_normal = ExtResource( 3 )
+texture_hover = ExtResource( 2 )
+script = ExtResource( 4 )
+
+[node name="Label" type="Label" parent="Buttons/6-9"]
+margin_right = 64.0
+margin_bottom = 64.0
+custom_fonts/font = SubResource( 1 )
+text = "6-9"
+align = 1
+valign = 1
+
+[node name="6-10" type="TextureButton" parent="Buttons"]
+margin_left = 272.0
+margin_top = 144.0
+margin_right = 336.0
+margin_bottom = 208.0
+texture_normal = ExtResource( 3 )
+texture_hover = ExtResource( 2 )
+script = ExtResource( 4 )
+
+[node name="Label" type="Label" parent="Buttons/6-10"]
+margin_right = 64.0
+margin_bottom = 64.0
+custom_fonts/font = SubResource( 1 )
+text = "6-10"
+align = 1
+valign = 1
+
+[node name="6-11" type="TextureButton" parent="Buttons"]
+margin_left = 352.0
+margin_top = 144.0
+margin_right = 416.0
+margin_bottom = 208.0
+texture_normal = ExtResource( 3 )
+texture_hover = ExtResource( 2 )
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Buttons/6-11"]
+margin_right = 64.0
+margin_bottom = 64.0
+custom_fonts/font = SubResource( 1 )
+text = "6-11"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="6-12" type="TextureButton" parent="Buttons"]
+margin_left = 432.0
+margin_top = 144.0
+margin_right = 496.0
+margin_bottom = 208.0
+texture_normal = ExtResource( 3 )
+texture_hover = ExtResource( 2 )
+script = ExtResource( 4 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="Buttons/6-12"]
+margin_right = 64.0
+margin_bottom = 64.0
+custom_fonts/font = SubResource( 1 )
+text = "6-12"
+align = 1
+valign = 1
+
+[node name="Overlay" type="Node2D" parent="."]
+
+[node name="Overlay6-2" type="TextureButton" parent="Overlay"]
+margin_left = 357.174
+margin_top = 423.598
+margin_right = 427.174
+margin_bottom = 493.598
+texture_normal = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Overlay6-3" type="TextureButton" parent="Overlay"]
+margin_left = 438.601
+margin_top = 423.598
+margin_right = 508.601
+margin_bottom = 493.598
+texture_normal = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Overlay6-4" type="TextureButton" parent="Overlay"]
+margin_left = 516.327
+margin_top = 423.598
+margin_right = 586.327
+margin_bottom = 493.598
+texture_normal = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Overlay6-5" type="TextureButton" parent="Overlay"]
+margin_left = 594.053
+margin_top = 425.448
+margin_right = 664.053
+margin_bottom = 495.448
+texture_normal = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Overlay6-6" type="TextureButton" parent="Overlay"]
+margin_left = 681.032
+margin_top = 425.448
+margin_right = 751.032
+margin_bottom = 495.448
+texture_normal = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Overlay6-7" type="TextureButton" parent="Overlay"]
+margin_left = 277.598
+margin_top = 499.473
+margin_right = 347.598
+margin_bottom = 569.473
+texture_normal = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Overlay6-8" type="TextureButton" parent="Overlay"]
+margin_left = 357.174
+margin_top = 503.174
+margin_right = 427.174
+margin_bottom = 573.174
+texture_normal = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Overlay6-9" type="TextureButton" parent="Overlay"]
+margin_left = 434.9
+margin_top = 501.323
+margin_right = 504.9
+margin_bottom = 571.323
+texture_normal = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Overlay6-10" type="TextureButton" parent="Overlay"]
+margin_left = 518.177
+margin_top = 505.025
+margin_right = 588.177
+margin_bottom = 575.025
+texture_normal = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Overlay6-11" type="TextureButton" parent="Overlay"]
+margin_left = 597.754
+margin_top = 503.174
+margin_right = 667.754
+margin_bottom = 573.174
+texture_normal = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Overlay6-12" type="TextureButton" parent="Overlay"]
+margin_left = 675.48
+margin_top = 501.323
+margin_right = 745.48
+margin_bottom = 571.323
+texture_normal = ExtResource( 7 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ReturnButton" parent="." instance=ExtResource( 8 )]
+[connection signal="button_down" from="Buttons/6-1" to="Buttons/6-1" method="_on_TextureButton_button_down"]
+[connection signal="button_down" from="Buttons/6-2" to="Buttons/6-2" method="_on_TextureButton_button_down"]
+[connection signal="button_down" from="Buttons/6-3" to="Buttons/6-3" method="_on_TextureButton_button_down"]
+[connection signal="button_down" from="Buttons/6-4" to="Buttons/6-4" method="_on_TextureButton_button_down"]
+[connection signal="button_down" from="Buttons/6-5" to="Buttons/6-5" method="_on_TextureButton_button_down"]
+[connection signal="button_down" from="Buttons/6-6" to="Buttons/6-6" method="_on_TextureButton_button_down"]
+[connection signal="button_down" from="Buttons/6-7" to="Buttons/6-7" method="_on_TextureButton_button_down"]
+[connection signal="button_down" from="Buttons/6-8" to="Buttons/6-8" method="_on_TextureButton_button_down"]
+[connection signal="button_down" from="Buttons/6-9" to="Buttons/6-9" method="_on_TextureButton_button_down"]
+[connection signal="button_down" from="Buttons/6-10" to="Buttons/6-10" method="_on_TextureButton_button_down"]
+[connection signal="button_down" from="Buttons/6-11" to="Buttons/6-11" method="_on_TextureButton_button_down"]
+[connection signal="button_down" from="Buttons/6-12" to="Buttons/6-12" method="_on_TextureButton_button_down"]

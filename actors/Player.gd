@@ -50,6 +50,7 @@ func _physics_process(delta: float) -> void:
 	)
 	# player cannot move on level start/restart:
 	if justStarted:
+		
 		if is_on_floor():
 			justStarted = false
 		else:
@@ -119,91 +120,38 @@ func calculate_move_velocity(current_velocity: Vector2, direction: Vector2, spee
 
 func animate_sprite(_skin: int):
 	# play animations depending on current state. should be self-explanatory.
-	$AnimatedSpriteMale1.visible = false
-	$AnimatedSpriteFemale1.visible = false
-	$AnimatedSpriteAdventurer1.visible = false
-	if skin == 0:
-		
-		$AnimatedSpriteMale1.visible = true
-		
+	var _allskins := $Skins.get_children()
+	for i in  _allskins:
+		i.visible = false
+	_allskins[_skin].visible = true
 	
-		if _velocity.y < 0:
-			$AnimatedSpriteMale1.play("jump")
-		elif _velocity.y > 0 and Input.is_action_pressed("P1-JUMP"):
-			$AnimatedSpriteMale1.play("jump")
-		elif _velocity.y > 0:
-			$AnimatedSpriteMale1.play("fall")
-		elif Input.is_action_pressed("P1-LEFT") and Input.is_action_pressed("P1-RIGHT"):
-			$AnimatedSpriteMale1.play("stand")
-		elif Input.is_action_pressed("P1-LEFT"):
-			$AnimatedSpriteMale1.play("walk")
-		elif Input.is_action_pressed("P1-RIGHT"):
-			$AnimatedSpriteMale1.play("walk")
-		else:
-			$AnimatedSpriteMale1.play("stand")
-	
-		# flip sprite depending on where the player faces/goes to
-		if Input.is_action_pressed("P1-LEFT") and Input.is_action_pressed("P1-RIGHT"):
-			pass   # skip if block if both left and right buttons are pressed
-		elif Input.is_action_pressed("P1-LEFT"):
-			$AnimatedSpriteMale1.set_flip_h(true)
-		elif Input.is_action_pressed("P1-RIGHT"):
-			$AnimatedSpriteMale1.set_flip_h(false)
-			
-			
-	if skin == 1:
-		
-		$AnimatedSpriteFemale1.visible = true
-	
-		if _velocity.y < 0:
-			$AnimatedSpriteFemale1.play("jump")
-		elif _velocity.y > 0 and Input.is_action_pressed("P1-JUMP"):
-			$AnimatedSpriteFemale1.play("jump")
-		elif _velocity.y > 0:
-			$AnimatedSpriteFemale1.play("fall")
-		elif Input.is_action_pressed("P1-LEFT") and Input.is_action_pressed("P1-RIGHT"):
-			$AnimatedSpriteFemale1.play("stand")
-		elif Input.is_action_pressed("P1-LEFT"):
-			$AnimatedSpriteFemale1.play("walk")
-		elif Input.is_action_pressed("P1-RIGHT"):
-			$AnimatedSpriteFemale1.play("walk")
-		else:
-			$AnimatedSpriteFemale1.play("stand")
-	
-		# flip sprite depending on where the player faces/goes to
-		if Input.is_action_pressed("P1-LEFT") and Input.is_action_pressed("P1-RIGHT"):
-			pass   # skip if block if both left and right buttons are pressed
-		elif Input.is_action_pressed("P1-LEFT"):
-			$AnimatedSpriteFemale1.set_flip_h(true)
-		elif Input.is_action_pressed("P1-RIGHT"):
-			$AnimatedSpriteFemale1.set_flip_h(false)
-	if skin == 2:
-		
-		$AnimatedSpriteAdventurer1.visible = true
-	
-		if _velocity.y < 0:
-			$AnimatedSpriteAdventurer1.play("jump")
-		elif _velocity.y > 0 and Input.is_action_pressed("P1-JUMP"):
-			$AnimatedSpriteAdventurer1.play("jump")
-		elif _velocity.y > 0:
-			$AnimatedSpriteAdventurer1.play("fall")
-		elif Input.is_action_pressed("P1-LEFT") and Input.is_action_pressed("P1-RIGHT"):
-			$AnimatedSpriteAdventurer1.play("stand")
-		elif Input.is_action_pressed("P1-LEFT"):
-			$AnimatedSpriteAdventurer1.play("walk")
-		elif Input.is_action_pressed("P1-RIGHT"):
-			$AnimatedSpriteAdventurer1.play("walk")
-		else:
-			$AnimatedSpriteAdventurer1.play("stand")
-	
-		# flip sprite depending on where the player faces/goes to
-		if Input.is_action_pressed("P1-LEFT") and Input.is_action_pressed("P1-RIGHT"):
-			pass   # skip if block if both left and right buttons are pressed
-		elif Input.is_action_pressed("P1-LEFT"):
-			$AnimatedSpriteAdventurer1.set_flip_h(true)
-		elif Input.is_action_pressed("P1-RIGHT"):
-			$AnimatedSpriteAdventurer1.set_flip_h(false)
+	if _velocity.y < 0:
+		_allskins[_skin].play("jump")
+	elif _velocity.y > 0 and Input.is_action_pressed("P1-JUMP"):
+		_allskins[_skin].play("jump")
+	elif _velocity.y > 0:
+		_allskins[_skin].play("fall")
+	elif Input.is_action_pressed("P1-LEFT") and Input.is_action_pressed("P1-RIGHT"):
+		_allskins[_skin].play("stand")
+	elif Input.is_action_pressed("P1-LEFT"):
+		_allskins[_skin].play("walk")
+	elif Input.is_action_pressed("P1-RIGHT"):
+		_allskins[_skin].play("walk")
+	elif Input.is_action_pressed("P1-CHEER"):
+		_allskins[_skin].play("cheer")
+	else:
+		_allskins[_skin].play("stand")
 
+	# flip sprite depending on where the player faces/goes to
+	if Input.is_action_pressed("P1-LEFT") and Input.is_action_pressed("P1-RIGHT"):
+		pass   # skip if block if both left and right buttons are pressed
+	elif Input.is_action_pressed("P1-LEFT"):
+		_allskins[_skin].set_flip_h(true)
+	elif Input.is_action_pressed("P1-RIGHT"):
+		_allskins[_skin].set_flip_h(false)
+			
+			
+	
 
 
 """ KILL: kills the player """

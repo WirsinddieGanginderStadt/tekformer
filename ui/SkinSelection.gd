@@ -24,7 +24,7 @@ func _ready():
 	
 	#seting all skin Sprites-skins  unvisible
 	$Female1.visible = false
-	$Male1.visible = false
+	$Male1.visible = true
 	$Adventurer1.visible = false
 	$Soldier1.visible = false
 	$Zombie1.visible = false
@@ -48,12 +48,39 @@ func writing_skin_in_config(_skin_cfg: int):
 	config.set_value("player","skin",_skin_cfg)
 	config.save("config.cfg")
 
-"""DISPLAYING SKIN: shows the right skin-sprite  """
+"""DISPLAYING SKIN: shows the right skin-sprite  over the Button"""
 # @param _skin_to_change 
 
 func displaying_Skin(_skin_to_display: int):
-	var children := get_children()
-	for i in  children:
-		i.visible = false
 	
-	children[_skin_to_display].visible = true
+	match _skin_to_display : #classic switch between diffrent skin_sprites
+		0:
+			$Male1.visible = true
+			$Female1.visible = false
+			$Adventurer1.visible = false
+			$Soldier1.visible = false
+			$Zombie1.visible = false
+		1:
+			$Male1.visible = false
+			$Female1.visible = true
+			$Adventurer1.visible = false
+			$Soldier1.visible = false
+			$Zombie1.visible = false
+		2:
+			$Male1.visible = false
+			$Female1.visible = false
+			$Adventurer1.visible = true
+			$Soldier1.visible = false
+			$Zombie1.visible = false
+		3:
+			$Male1.visible = false
+			$Female1.visible = false
+			$Adventurer1.visible = false
+			$Soldier1.visible = true
+			$Zombie1.visible = false
+		4:
+			$Male1.visible = false
+			$Female1.visible = false
+			$Adventurer1.visible = false
+			$Soldier1.visible = false
+			$Zombie1.visible = true

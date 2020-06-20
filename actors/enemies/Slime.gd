@@ -40,7 +40,7 @@ func animate_sprite() -> void:
 			$AnimatedSprite.flip_h = false
 	else:
 		$AnimatedSprite.play("dead")
-		$Timer.start()
+		
 
 
 

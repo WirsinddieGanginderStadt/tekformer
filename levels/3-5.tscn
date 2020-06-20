@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://levels/LevelControls.gd" type="Script" id=1]
 [ext_resource path="res://levels/ParallaxBackground3.tscn" type="PackedScene" id=2]
@@ -9,6 +9,7 @@
 [ext_resource path="res://ui/Fade/FadeIn.tscn" type="PackedScene" id=7]
 [ext_resource path="res://interactables/NextLevelTeleporter.tscn" type="PackedScene" id=8]
 [ext_resource path="res://ui/PauseScreen.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Objects/Coin.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Objects/AllCoins.tscn" type="PackedScene" id=11]
 
 [node name="3-5" type="Node2D"]
@@ -40,6 +41,30 @@ position = Vector2( 98, -56 )
 visible = false
 
 [node name="AllCoins" parent="." instance=ExtResource( 11 )]
+
+[node name="Coin" parent="AllCoins" instance=ExtResource( 10 )]
+position = Vector2( 734.235, 369.439 )
+
+[node name="Coin2" parent="AllCoins" instance=ExtResource( 10 )]
+position = Vector2( 1713.69, 239.345 )
+
+[node name="Coin3" parent="AllCoins" instance=ExtResource( 10 )]
+position = Vector2( 2624.35, 171.914 )
+
+[node name="Coin5" parent="AllCoins" instance=ExtResource( 10 )]
+position = Vector2( 3296, 152 )
+
+[node name="Coin6" parent="AllCoins" instance=ExtResource( 10 )]
+position = Vector2( 5696, 448 )
+
+[node name="Coin7" parent="AllCoins" instance=ExtResource( 10 )]
+position = Vector2( 5736, 448 )
+
+[node name="Coin8" parent="AllCoins" instance=ExtResource( 10 )]
+position = Vector2( 5776, 448 )
+
+[node name="Coin4" parent="AllCoins" instance=ExtResource( 10 )]
+position = Vector2( 2480.06, 208.149 )
 
 [node name="3-6" parent="." instance=ExtResource( 8 )]
 position = Vector2( 7501.9, 420.147 )

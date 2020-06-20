@@ -46,6 +46,12 @@ position = Vector2( 6304, 424 )
 [node name="fly3" parent="Enemies" instance=ExtResource( 10 )]
 position = Vector2( 6912, 448 )
 
+[node name="SlimeGreen" parent="Enemies" instance=ExtResource( 12 )]
+position = Vector2( 7360, 472 )
+
+[node name="SlimeGreen2" parent="Enemies" instance=ExtResource( 12 )]
+position = Vector2( 7840, 192 )
+
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="PauseScreen" parent="CanvasLayer" instance=ExtResource( 9 )]
@@ -119,9 +125,3 @@ position = Vector2( 5368, 472 )
 [node name="3-7" parent="." instance=ExtResource( 8 )]
 position = Vector2( 9064, 352 )
 world = 3
-
-[node name="SlimeGreen" parent="." instance=ExtResource( 12 )]
-position = Vector2( 7360, 472 )
-
-[node name="SlimeGreen2" parent="." instance=ExtResource( 12 )]
-position = Vector2( 7840, 192 )

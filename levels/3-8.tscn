@@ -1,0 +1,50 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://levels/LevelControls.gd" type="Script" id=1]
+[ext_resource path="res://levels/ParallaxBackground3.tscn" type="PackedScene" id=2]
+[ext_resource path="res://tilesets/world3.tres" type="TileSet" id=3]
+[ext_resource path="res://actors/Player.tscn" type="PackedScene" id=4]
+[ext_resource path="res://ui/Fade/FadeOut.tscn" type="PackedScene" id=5]
+[ext_resource path="res://ui/HUD.tscn" type="PackedScene" id=6]
+[ext_resource path="res://ui/Fade/FadeIn.tscn" type="PackedScene" id=7]
+[ext_resource path="res://interactables/NextLevelTeleporter.tscn" type="PackedScene" id=8]
+[ext_resource path="res://ui/PauseScreen.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Objects/AllCoins.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Objects/Coin.tscn" type="PackedScene" id=13]
+
+[node name="3-8" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="ParallaxBackground3" parent="." instance=ExtResource( 2 )]
+
+[node name="FadeIn" parent="." instance=ExtResource( 7 )]
+
+[node name="FadeOut" parent="." instance=ExtResource( 5 )]
+position = Vector2( -304, 8 )
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = ExtResource( 3 )
+cell_size = Vector2( 70, 70 )
+format = 1
+tile_data = PoolIntArray( -393161, 33, 0, -327625, 33, 0, -262089, 33, 0, -196553, 33, 0, -131017, 33, 0, -65481, 33, 0, 55, 33, 0, 65591, 33, 0, 131120, 7, 0, 131121, 2, 0, 131122, 2, 0, 131123, 8, 0, 131127, 33, 0, 196657, 33, 0, 196658, 33, 0, 196663, 33, 0, 262193, 33, 0, 262194, 33, 0, 262199, 33, 0, 393187, 32, 0, 393191, 7, 0, 393192, 2, 0, 393193, 2, 0, 393194, 8, 0, 327729, 33, 0, 327730, 33, 0, 327735, 33, 0, 393265, 33, 0, 393266, 33, 0, 393271, 31, 0, 524262, 0, 0, 524263, 2, 0, 524264, 2, 0, 524265, 2, 0, 524266, 2, 0, 524267, 3, 0, 524286, 7, 0, 524287, 2, 0, 458752, 2, 0, 458753, 2, 0, 458754, 2, 0, 458755, 8, 0, 458801, 33, 0, 458802, 33, 0, 458811, 7, 0, 458812, 2, 0, 458813, 2, 0, 458814, 8, 0, 589823, 33, 0, 524288, 33, 0, 524289, 33, 0, 524290, 33, 0, 524337, 33, 0, 524338, 33, 0, 524348, 33, 0, 524349, 33, 0, 655335, 0, 0, 655336, 2, 0, 655337, 2, 0, 655338, 3, 0, 655359, 33, 0, 589824, 33, 0, 589825, 33, 0, 589826, 33, 0, 589873, 33, 0, 589874, 33, 0, 589884, 33, 0, 589885, 33, 0, 720895, 33, 0, 655360, 33, 0, 655361, 33, 0, 655362, 33, 0, 655409, 33, 0, 655410, 33, 0, 655420, 33, 0, 655421, 33, 0, 786431, 33, 0, 720896, 33, 0, 720897, 33, 0, 720898, 33, 0, 720956, 33, 0, 720957, 33, 0, 851942, 9, 0, 851943, 2, 0, 851944, 2, 0, 851945, 2, 0, 851946, 2, 0, 851947, 10, 0, 786492, 33, 0, 786493, 33, 0, 983015, 9, 0, 983016, 2, 0, 983017, 2, 0, 983018, 10, 0, 1114084, 6, 0, 1114086, 36, 0, 1114087, 2, 0, 1114088, 2, 0, 1114089, 2, 0, 1114090, 2, 0, 1114091, 38, 0, 1179619, 6, 0, 1179620, 13, 0, 1245154, 6, 0, 1245155, 13, 0, 1310694, 5, 0, 1376230, 12, 0, 1376231, 5, 0, 1441767, 12, 0, 1441768, 5, 0 )
+
+[node name="Player1" parent="." instance=ExtResource( 4 )]
+position = Vector2( 98, -56 )
+
+[node name="HUD" parent="." instance=ExtResource( 6 )]
+
+[node name="Enemies" type="Node2D" parent="."]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="PauseScreen" parent="CanvasLayer" instance=ExtResource( 9 )]
+visible = false
+
+[node name="AllCoins" parent="." instance=ExtResource( 11 )]
+
+[node name="Coin" parent="AllCoins" instance=ExtResource( 13 )]
+position = Vector2( 768, 248 )
+
+[node name="3-8" parent="." instance=ExtResource( 8 )]
+position = Vector2( 4272, 496 )
+world = 3

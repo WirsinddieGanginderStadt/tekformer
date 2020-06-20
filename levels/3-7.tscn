@@ -1,0 +1,89 @@
+[gd_scene load_steps=12 format=2]
+
+[ext_resource path="res://levels/LevelControls.gd" type="Script" id=1]
+[ext_resource path="res://levels/ParallaxBackground3.tscn" type="PackedScene" id=2]
+[ext_resource path="res://tilesets/world3.tres" type="TileSet" id=3]
+[ext_resource path="res://actors/Player.tscn" type="PackedScene" id=4]
+[ext_resource path="res://ui/Fade/FadeOut.tscn" type="PackedScene" id=5]
+[ext_resource path="res://ui/HUD.tscn" type="PackedScene" id=6]
+[ext_resource path="res://ui/Fade/FadeIn.tscn" type="PackedScene" id=7]
+[ext_resource path="res://interactables/NextLevelTeleporter.tscn" type="PackedScene" id=8]
+[ext_resource path="res://ui/PauseScreen.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Objects/AllCoins.tscn" type="PackedScene" id=11]
+[ext_resource path="res://Objects/Coin.tscn" type="PackedScene" id=13]
+
+[node name="3-7" type="Node2D"]
+script = ExtResource( 1 )
+
+[node name="ParallaxBackground3" parent="." instance=ExtResource( 2 )]
+
+[node name="FadeIn" parent="." instance=ExtResource( 7 )]
+
+[node name="FadeOut" parent="." instance=ExtResource( 5 )]
+position = Vector2( -304, 8 )
+
+[node name="TileMap" type="TileMap" parent="."]
+tile_set = ExtResource( 3 )
+cell_size = Vector2( 70, 70 )
+format = 1
+tile_data = PoolIntArray( -393161, 33, 0, -327625, 33, 0, -262120, 33, 0, -262089, 33, 0, -196592, 33, 0, -196584, 33, 0, -196573, 33, 0, -196553, 33, 0, -131056, 33, 0, -131048, 33, 0, -131037, 33, 0, -131017, 33, 0, -65520, 33, 0, -65512, 33, 0, -65501, 33, 0, -65481, 33, 0, 16, 33, 0, 24, 33, 0, 35, 33, 0, 55, 33, 0, 65552, 31, 0, 65560, 33, 0, 65571, 33, 0, 65591, 33, 0, 131096, 33, 0, 131107, 33, 0, 131120, 7, 0, 131121, 2, 0, 131122, 2, 0, 131123, 8, 0, 131127, 33, 0, 196632, 33, 0, 196643, 33, 0, 196657, 33, 0, 196658, 33, 0, 196663, 33, 0, 262152, 7, 0, 262153, 2, 0, 262154, 2, 0, 262155, 2, 0, 262156, 2, 0, 262157, 8, 0, 262162, 7, 0, 262163, 2, 0, 262164, 2, 0, 262165, 8, 0, 262168, 31, 0, 262179, 31, 0, 262187, 7, 0, 262188, 2, 0, 262189, 2, 0, 262190, 8, 0, 262193, 33, 0, 262194, 33, 0, 262199, 33, 0, 393187, 32, 0, 393191, 7, 0, 393192, 2, 0, 393193, 2, 0, 393194, 8, 0, 327689, 33, 0, 327690, 33, 0, 327691, 33, 0, 327692, 33, 0, 327699, 33, 0, 327700, 33, 0, 327724, 33, 0, 327725, 33, 0, 327729, 33, 0, 327730, 33, 0, 327735, 33, 0, 393225, 33, 0, 393226, 33, 0, 393227, 33, 0, 393228, 33, 0, 393235, 33, 0, 393236, 33, 0, 393243, 7, 0, 393244, 2, 0, 393245, 2, 0, 393246, 2, 0, 393247, 2, 0, 393248, 8, 0, 393253, 7, 0, 393254, 2, 0, 393255, 2, 0, 393256, 8, 0, 393260, 33, 0, 393261, 33, 0, 393265, 33, 0, 393266, 33, 0, 393271, 31, 0, 524262, 0, 0, 524263, 2, 0, 524264, 2, 0, 524265, 2, 0, 524266, 2, 0, 524267, 3, 0, 524286, 7, 0, 524287, 2, 0, 458752, 2, 0, 458753, 2, 0, 458754, 2, 0, 458755, 8, 0, 458761, 33, 0, 458762, 33, 0, 458763, 33, 0, 458764, 33, 0, 458771, 33, 0, 458772, 33, 0, 458780, 33, 0, 458781, 33, 0, 458782, 33, 0, 458783, 33, 0, 458790, 33, 0, 458791, 33, 0, 458796, 33, 0, 458797, 33, 0, 458801, 33, 0, 458802, 33, 0, 458811, 7, 0, 458812, 2, 0, 458813, 2, 0, 458814, 8, 0, 589823, 33, 0, 524288, 33, 0, 524289, 33, 0, 524290, 33, 0, 524297, 33, 0, 524298, 33, 0, 524299, 33, 0, 524300, 33, 0, 524307, 33, 0, 524308, 33, 0, 524316, 33, 0, 524317, 33, 0, 524318, 33, 0, 524319, 33, 0, 524326, 33, 0, 524327, 33, 0, 524332, 33, 0, 524333, 33, 0, 524337, 33, 0, 524338, 33, 0, 524348, 33, 0, 524349, 33, 0, 655335, 0, 0, 655336, 2, 0, 655337, 2, 0, 655338, 3, 0, 655359, 33, 0, 589824, 33, 0, 589825, 33, 0, 589826, 33, 0, 589833, 33, 0, 589834, 33, 0, 589835, 33, 0, 589836, 33, 0, 589843, 33, 0, 589844, 33, 0, 589852, 33, 0, 589853, 33, 0, 589854, 33, 0, 589855, 33, 0, 589862, 33, 0, 589863, 33, 0, 589868, 33, 0, 589869, 33, 0, 589873, 33, 0, 589874, 33, 0, 589884, 33, 0, 589885, 33, 0, 720895, 33, 0, 655360, 33, 0, 655361, 33, 0, 655362, 33, 0, 655369, 33, 0, 655370, 33, 0, 655371, 33, 0, 655372, 33, 0, 655379, 33, 0, 655380, 33, 0, 655388, 33, 0, 655389, 33, 0, 655390, 33, 0, 655391, 33, 0, 655398, 33, 0, 655399, 33, 0, 655404, 33, 0, 655405, 33, 0, 655409, 33, 0, 655410, 33, 0, 655420, 33, 0, 655421, 33, 0, 786431, 33, 0, 720896, 33, 0, 720897, 33, 0, 720898, 33, 0, 720905, 33, 0, 720906, 33, 0, 720907, 33, 0, 720908, 33, 0, 720915, 33, 0, 720916, 33, 0, 720924, 33, 0, 720925, 33, 0, 720926, 33, 0, 720927, 33, 0, 720934, 33, 0, 720935, 33, 0, 720940, 33, 0, 720941, 33, 0, 720956, 33, 0, 720957, 33, 0, 851942, 9, 0, 851943, 2, 0, 851944, 2, 0, 851945, 2, 0, 851946, 2, 0, 851947, 10, 0, 786460, 33, 0, 786461, 33, 0, 786462, 33, 0, 786463, 33, 0, 786470, 33, 0, 786471, 33, 0, 786476, 33, 0, 786477, 33, 0, 786492, 33, 0, 786493, 33, 0, 983015, 9, 0, 983016, 2, 0, 983017, 2, 0, 983018, 10, 0, 1114084, 6, 0, 1114086, 36, 0, 1114087, 2, 0, 1114088, 2, 0, 1114089, 2, 0, 1114090, 2, 0, 1114091, 38, 0, 1179619, 6, 0, 1179620, 13, 0, 1245154, 6, 0, 1245155, 13, 0, 1310694, 5, 0, 1376230, 12, 0, 1376231, 5, 0, 1441767, 12, 0, 1441768, 5, 0 )
+
+[node name="Player1" parent="." instance=ExtResource( 4 )]
+position = Vector2( 98, -56 )
+
+[node name="HUD" parent="." instance=ExtResource( 6 )]
+
+[node name="Enemies" type="Node2D" parent="."]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="PauseScreen" parent="CanvasLayer" instance=ExtResource( 9 )]
+visible = false
+
+[node name="AllCoins" parent="." instance=ExtResource( 11 )]
+
+[node name="Coin" parent="AllCoins" instance=ExtResource( 13 )]
+position = Vector2( 768, 248 )
+
+[node name="Coin2" parent="AllCoins" instance=ExtResource( 13 )]
+position = Vector2( 2104, 384 )
+
+[node name="Coin3" parent="AllCoins" instance=ExtResource( 13 )]
+position = Vector2( 2664, 384 )
+
+[node name="Coin4" parent="AllCoins" instance=ExtResource( 13 )]
+position = Vector2( 2704, 384 )
+
+[node name="Coin5" parent="AllCoins" instance=ExtResource( 13 )]
+position = Vector2( 2744, 384 )
+
+[node name="Coin6" parent="AllCoins" instance=ExtResource( 13 )]
+position = Vector2( 2784, 384 )
+
+[node name="Coin10" parent="AllCoins" instance=ExtResource( 13 )]
+position = Vector2( 3432, 104 )
+
+[node name="Coin9" parent="AllCoins" instance=ExtResource( 13 )]
+position = Vector2( 3472, 104 )
+
+[node name="Coin8" parent="AllCoins" instance=ExtResource( 13 )]
+position = Vector2( 3512, 104 )
+
+[node name="Coin7" parent="AllCoins" instance=ExtResource( 13 )]
+position = Vector2( 3552, 104 )
+
+[node name="Coin14" parent="AllCoins" instance=ExtResource( 13 )]
+position = Vector2( 3080, 248 )
+
+[node name="Coin13" parent="AllCoins" instance=ExtResource( 13 )]
+position = Vector2( 3120, 248 )
+
+[node name="Coin12" parent="AllCoins" instance=ExtResource( 13 )]
+position = Vector2( 3160, 248 )
+
+[node name="Coin11" parent="AllCoins" instance=ExtResource( 13 )]
+position = Vector2( 3200, 248 )
+
+[node name="3-8" parent="." instance=ExtResource( 8 )]
+position = Vector2( 4272, 496 )
+world = 3
